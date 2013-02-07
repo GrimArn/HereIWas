@@ -11,7 +11,8 @@ public class HomeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        //setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_inscription);
        
     // Changement de police Billabong    
         TextView textViewBillabong = (TextView) findViewById(R.id.Title);
