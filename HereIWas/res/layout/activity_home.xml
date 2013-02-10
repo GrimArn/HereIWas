@@ -22,19 +22,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="62dp"
         android:text="@string/connexion" />
-
-	<TextView
-	    android:id="@+id/Title"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignBaseline="@+id/Title2"
-	    android:layout_alignBottom="@+id/Title2"
-	    android:layout_alignRight="@+id/ConnectButton"
-	    android:layout_marginRight="61dp"
-	    android:text="@string/here"
-	    android:textColor="#F6E497"
-	    android:textSize="45sp"
-	    android:textStyle="bold" />
 	
 	<TextView
 	    android:id="@+id/Title2"
@@ -46,6 +33,19 @@
 	    android:layout_marginTop="114dp"
 	    android:text="@string/iwas"
 	    android:textColor="#FFFFCC"
+	    android:textSize="45sp"
+	    android:textStyle="bold" />
+
+	<TextView
+	    android:id="@+id/Title"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/Title2"
+	    android:layout_alignBottom="@+id/Title2"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginLeft="27dp"
+	    android:text="@string/here"
+	    android:textColor="#F6E497"
 	    android:textSize="45sp"
 	    android:textStyle="bold" />
 
