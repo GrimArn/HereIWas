@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Permet d'avoir un background degradé en commencent par bleu foncé pour terminé au clair -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <gradient android:startColor="#000066" 
-       		  android:endColor="#33CCFF" 
-        	  android:angle="270"
-    />
-    <!-- Pour savoir pourquoi un angle de 270° : lire la partie de la doc sur android:angle ! -->
+    <gradient 
+        android:startColor="#000066" 
+       	android:endColor="#33CCFF"  
+       	android:angle="270" />
 </shape>

@@ -14,6 +14,15 @@
         android:layout_marginBottom="131dp"
         android:text="@string/inscription" />
 
+    <Button
+        android:id="@+id/RegisterButton"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/ConnectButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:text="@string/connexion" />
+	
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
@@ -23,16 +32,5 @@
         android:layout_marginTop="61dp"
         android:contentDescription="@string/maintitleimg"
         android:src="@drawable/MainTitleImage" />
-
-    <Button
-        android:id="@+id/RegisterButton"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/ConnectButton"
-        android:layout_alignTop="@+id/ConnectButton"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="62dp"
-        android:text="@string/connexion" />
 
 </RelativeLayout>
