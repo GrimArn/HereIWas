@@ -14,39 +14,25 @@
         android:layout_marginBottom="131dp"
         android:text="@string/inscription" />
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        android:contentDescription="@string/maintitleimg"
+        android:src="@drawable/MainTitleImage" />
+
     <Button
         android:id="@+id/RegisterButton"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_alignLeft="@+id/ConnectButton"
         android:layout_alignTop="@+id/ConnectButton"
         android:layout_centerHorizontal="true"
+        android:gravity="center"
         android:layout_marginTop="62dp"
         android:text="@string/connexion" />
-	
-	<TextView
-	    android:id="@+id/Title2"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignLeft="@+id/ConnectButton"
-	    android:layout_alignParentTop="true"
-	    android:layout_marginLeft="66dp"
-	    android:layout_marginTop="114dp"
-	    android:text="@string/iwas"
-	    android:textColor="#FFFFCC"
-	    android:textSize="45sp"
-	    android:textStyle="bold" />
-
-	<TextView
-	    android:id="@+id/Title"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignBaseline="@+id/Title2"
-	    android:layout_alignBottom="@+id/Title2"
-	    android:layout_alignParentLeft="true"
-	    android:layout_marginLeft="27dp"
-	    android:text="@string/here"
-	    android:textColor="#F6E497"
-	    android:textSize="45sp"
-	    android:textStyle="bold" />
 
 </RelativeLayout>
