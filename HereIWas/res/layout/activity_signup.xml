@@ -25,6 +25,7 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_centerHorizontal="true"
+	            android:contentDescription="@string/maintitleimg"
 	            android:src="@drawable/MainTitleImage" />
 			
 	    </RelativeLayout>
@@ -80,7 +81,7 @@
 	            android:layout_height="wrap_content"
 	            android:layout_marginTop="5dip"
 	            android:hint="@string/password"
-	            android:password="true"
+	            android:inputType="password"
 	            android:singleLine="true" />
 
 	    </LinearLayout>
