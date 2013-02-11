@@ -16,34 +16,16 @@
 	        android:id="@+id/header"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
 	        android:paddingBottom="5dip"
 	        android:paddingTop="5dip" >
 
-			<TextView
-			    android:id="@+id/Title"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:layout_alignParentLeft="true"
-			    android:layout_alignParentTop="true"
-			    android:layout_marginLeft="31dp"
-			    android:layout_marginTop="29dp"
-			    android:text="@string/here"
-			    android:textColor="#F6E497"
-			    android:textSize="45sp"
-			    android:textStyle="bold" />
-
-			<TextView
-			    android:id="@+id/Title2"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:layout_alignBaseline="@+id/Title"
-			    android:layout_alignBottom="@+id/Title"
-			    android:layout_alignParentRight="true"
-			    android:layout_marginRight="55dp"
-			    android:text="@string/iwas"
-			    android:textColor="#FFFFCC"
-			    android:textSize="45sp"
-			    android:textStyle="bold" />
+	        <ImageView
+	            android:id="@+id/imageView1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:src="@drawable/MainTitleImage" />
 			
 	    </RelativeLayout>
 
