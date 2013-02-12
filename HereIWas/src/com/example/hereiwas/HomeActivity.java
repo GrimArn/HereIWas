@@ -1,18 +1,14 @@
 package com.example.hereiwas;
 
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class HomeActivity extends Activity {
@@ -21,57 +17,57 @@ public class HomeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        //setContentView(R.layout.activity_signup);
-       
-    // --- BILLABONG --- Changement de police pour les button    
-      
-      // declaration        
-        TextView textViewBillabongOkButton = (TextView) findViewById(R.id.OkButton);
-        TextView textViewBillabongCancelButton = (TextView) findViewById(R.id.CancelButton);
-        //TextView textViewBillabongBtnLogin = (TextView) findViewById(R.id.LoginButton);
-        //TextView textViewBillabongBtnCancel = (TextView) findViewById(R.id.CancelButton);
+   
+     // Changement de police 
+        // declaration des TextView pour les boutons
+        TextView textViewBillabongConnectButton  = (TextView) findViewById(R.id.ConnectButton);
+        TextView textViewBillabongRegisterButton = (TextView) findViewById(R.id.RegisterButton);
         
-      //initialisation
-        Typeface fontBillabong = Typeface.createFromAsset(getAssets(), "Billabong.ttf");
-        textViewBillabongOkButton.setTypeface(fontBillabong);
-        textViewBillabongCancelButton.setTypeface(fontBillabong);
-        //textViewBillabongBtnLogin.setTypeface(fontBillabong);
-        //textViewBillabongBtnCancel.setTypeface(fontBillabong);  
+        // declaration de la police
+        Typeface fontBillabong 			= Typeface.createFromAsset(getAssets(), "Billabong.ttf");
         
+        // initialisation de la police sur les TextView
+        textViewBillabongConnectButton.setTypeface(fontBillabong);
+        textViewBillabongRegisterButton.setTypeface(fontBillabong);
         
-  /* // --- ROBOTO BLACK-ITALIC ---- Changement de la police des champs, texte
-      
-        // declaration
-        TextView textViewRobotoBILogin = (TextView) findViewById(R.id.champLogin);
-        TextView textViewRobotoBIPassword = (TextView) findViewById(R.id.champPassword);
+     // Interaction entre les activites grace aux boutons
         
-        //initialisation
-        Typeface fontRobotoBlackItalic = Typeface.createFromAsset(getAssets(), "Roboto-BlackItalic.ttf");
-        textViewRobotoBIPassword.setTypeface(fontRobotoBlackItalic);
-        textViewRobotoBILogin.setTypeface(fontRobotoBlackItalic); */
+        Button loginButton = (Button)findViewById(R.id.RegisterButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+ 
+			@Override
+			public void onClick(View v) {
+				
+				Intent t = new Intent(HomeActivity.this, LoginActivity.class);
+				startActivity(t);
+			}
+		});
+    }
         
-    
- /*   // --- ROBOTO-LIGHT --- Police pour les hint des editText 
-        // declaration
-        TextView textViewRobotoLightLogin = (TextView) findViewById(R.id.champHintLogin);
-        TextView textViewRobotoLightPassword = (TextView) findViewById(R.id.champHintPassword);
-     
-        //initialisation
-        Typeface fontRobotoLight = Typeface.createFromAsset(getAssets(), "Roboto-Light.ttf");
-        textViewRobotoLightLogin.setTypeface(fontRobotoLight);
-        textViewRobotoLightPassword.setTypeface(fontRobotoLight); */
-
-        final Button loginButton = (Button) findViewById(R.id.ConnectButton);
-        loginButton.setOnClickListener(new OnClickListener() {
+/*   // Recuperation du bouton defini dans fichier layout/activity_signin
+        Button loginButton = (Button) findViewById(R.id.RegisterButton);
+        
+   // Declaration d'un listener sur l'evenement OnClick du bouton
+        loginButton.setOnClickListener (new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				
-				Intent intent = new Intent (HomeActivity.this, LoginActivity.class);
-				startActivity(intent);
+				// Recuperation des valeurs saisie par l'utilisateur
+				
+				
+				// Transmission des informations a l'activity
+				
+				Intent intent = new Intent (getApplicationContext()), LoginActivity.class);
+        		intent.putExtra();
+        		
+        		// Lancement activité
+        		
+        		startActivity(intent);
 			}
-		});
-    }
+		}); 
+        
+    } */
     
 
     public boolean onCreateOptionsMenu(Menu menu) {
