@@ -23,7 +23,7 @@
     <string name="date"					>JJ/MM/AAAA		</string>
     <string name="birthday"				>Anniversaire	</string>
     <string name="annuler"				>Annuler		</string>
-
+	<string name="maintitleimg"			>Blabla			</string>
     
 </resources>
 
