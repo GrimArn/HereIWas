@@ -41,16 +41,6 @@
 	        android:hint="@string/nom"
 	        android:inputType="textPersonName" />
 	
-	    <Button
-	        android:id="@+id/CancelButton"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentBottom="true"
-	        android:layout_alignParentLeft="true"
-	        android:layout_marginBottom="26dp"
-	        android:paddingTop="20dp"
-	        android:text="@string/annuler" />
-	
 	    <EditText
 	        android:id="@+id/champMail"
 	        android:layout_width="wrap_content"
@@ -93,6 +83,75 @@
 	        android:layout_above="@+id/CancelButton"
 	        android:layout_alignParentLeft="true"
 	        android:text="@string/validInscription" />
+
+	    <EditText
+	        android:id="@+id/champPseudo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/champDateAnniv"
+	        android:layout_toRightOf="@+id/TextViewPassword"
+	        android:ems="10" />
+
+	    <TextView
+	        android:id="@+id/TextViewPseudo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/champPseudo"
+	        android:layout_alignLeft="@+id/textViewBirthday"
+	        android:text="@string/login"
+	        android:textColor="#FFFFFF"
+	        android:textSize="15sp"
+	        android:textStyle="bold" />
+
+	    <EditText
+	        android:id="@+id/champPassword"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/champPseudo"
+	        android:layout_below="@+id/champPseudo"
+	        android:ems="10"
+	        android:inputType="textPassword" />
+
+	    <Button
+	        android:id="@+id/CancelButton"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:paddingTop="20dp"
+	        android:text="@string/annuler" />
+
+	    <TextView
+	        android:id="@+id/TextViewPassword"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/champPassword"
+	        android:layout_alignLeft="@+id/TextViewPseudo"
+	        android:text="@string/password"
+	        android:textColor="#FFFFFF"
+	        android:textSize="15sp"
+	        android:textStyle="bold" />
+
+	    <EditText
+	        android:id="@+id/champConfirmPassword"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/champPassword"
+	        android:layout_below="@+id/champPassword"
+	        android:ems="10"
+	        android:inputType="textPassword" />
+
+	    <TextView
+	        android:id="@+id/TextView01"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/champConfirmPassword"
+	        android:layout_alignLeft="@+id/TextViewPassword"
+	        android:text="@string/confirmpasswd"
+	        android:textColor="#FFFFFF"
+	        android:textSize="15sp"
+	        android:textStyle="bold" />
 
 	</RelativeLayout>
 

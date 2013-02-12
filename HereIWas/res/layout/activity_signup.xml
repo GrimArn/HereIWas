@@ -64,16 +64,6 @@
 
 	            <requestFocus />
 	        </EditText>
-	        
-	        
-	        <EditText
-	            android:id="@+id/champHintPassword"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_marginTop="5dip"
-	            android:hint="@string/password"
-	            android:inputType="textPassword"
-	            android:singleLine="true" />
 
 	        <TextView
 	            android:id="@+id/champPassword"
@@ -84,6 +74,15 @@
 	            android:textColor="#FFFFFF"
 	            android:textSize="20sp"
 	            android:textStyle="bold" />
+	        
+	        <EditText
+	            android:id="@+id/champHintPassword"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="5dip"
+	            android:hint="@string/password"
+	            android:inputType="textPassword"
+	            android:singleLine="true" />
 
 
 	    </LinearLayout>
