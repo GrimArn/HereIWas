@@ -5,153 +5,107 @@
 	android:layout_height="fill_parent"
 	android:fillViewport="true">
   
-	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    	android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-    	android:background="@drawable/background"
-    	android:gravity="center" >
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/background" >
 
-	    <QuickContactBadge
-	        android:id="@+id/avatar"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="18dp"
-	        android:layout_marginTop="30dp" />
-	
-	    <EditText
-	        android:id="@+id/champPrenom"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentRight="true"
-	        android:layout_alignTop="@+id/avatar"
-	        android:ems="10"
-	        android:hint="@string/prenom"
-	        android:inputType="textPersonName" >
-	
-	        <requestFocus />
-	    </EditText>
+	    <!-- Header  Starts -->
 
-	    <EditText
-	        android:id="@+id/champNom"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/champPrenom"
-	        android:layout_below="@+id/champPrenom"
-	        android:ems="10"
-	        android:hint="@string/nom"
-	        android:inputType="textPersonName" />
-	
-	    <EditText
-	        android:id="@+id/champMail"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/avatar"
-	        android:layout_alignParentRight="true"
-	        android:layout_below="@+id/champNom"
-	        android:layout_marginTop="31dp"
-	        android:ems="10"
-	        android:hint="@string/email"
-	        android:inputType="textEmailAddress" />
-	
-	    <EditText
-	        android:id="@+id/champDateAnniv"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/champNom"
-	        android:layout_below="@+id/champMail"
-	        android:layout_marginTop="17dp"
-	        android:ems="10"
-	        android:hint="@string/date"
-	        android:inputType="date" />
-	
-	    <TextView
-	        android:id="@+id/textViewBirthday"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/champDateAnniv"
-	        android:layout_alignBottom="@+id/champDateAnniv"
-	        android:layout_alignLeft="@+id/champMail"
-	        android:text="@string/birthday" 
-	       	android:textColor="#FFFFFF"
-	    	android:textSize="15sp"
-	    	android:textStyle="bold" />
-
-	    <Button
-	        android:id="@+id/OkButton"
+	    <RelativeLayout
+	        android:id="@+id/header"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:layout_above="@+id/CancelButton"
+	        android:layout_alignParentTop="true"
+	        android:paddingBottom="5dip"
+	        android:paddingTop="5dip" >
+
+	        <ImageView
+	            android:id="@+id/imageView1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:contentDescription="@string/maintitleimg"
+	            android:src="@drawable/maintitleimage" />
+			
+	    </RelativeLayout>
+
+	    <!-- Header Ends -->
+
+	    <LinearLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:id="@+id/linearLayout1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
 	        android:layout_alignParentLeft="true"
-	        android:text="@string/validInscription" />
+	        android:layout_below="@+id/header"
+	        android:layout_marginTop="31dp"
+	        android:orientation="vertical"
+	        android:padding="10dip" >
 
-	    <EditText
-	        android:id="@+id/champPseudo"
-	        android:layout_width="wrap_content"
+	        <TextView
+	            android:id="@+id/champLogin"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dip"
+	            android:text="@string/login"
+	            android:textColor="#FFFFFF"
+	            android:textSize="20sp" 
+	            android:textStyle="bold"/>
+  
+	        <EditText
+	            android:id="@+id/champHintLogin"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="20dip"
+	            android:layout_marginTop="5dip"
+	            android:hint="@string/email"
+	            android:singleLine="true" >
+
+	            <requestFocus />
+	        </EditText>
+
+	        <TextView
+	            android:id="@+id/champPassword"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dip"
+	            android:text="@string/password"
+	            android:textColor="#FFFFFF"
+	            android:textSize="20sp"
+	            android:textStyle="bold" />
+	        
+	        <EditText
+	            android:id="@+id/champHintPassword"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="5dip"
+	            android:hint="@string/password"
+	            android:inputType="textPassword"
+	            android:singleLine="true" />
+
+
+	    </LinearLayout>
+
+	    <Button
+	        android:id="@+id/LoginButton"
+	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:layout_alignParentRight="true"
-	        android:layout_below="@+id/champDateAnniv"
-	        android:layout_toRightOf="@+id/TextViewPassword"
-	        android:ems="10" />
-
-	    <TextView
-	        android:id="@+id/TextViewPseudo"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@+id/champPseudo"
-	        android:layout_alignLeft="@+id/textViewBirthday"
-	        android:text="@string/login"
-	        android:textColor="#FFFFFF"
-	        android:textSize="15sp"
-	        android:textStyle="bold" />
-
-	    <EditText
-	        android:id="@+id/champPassword"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/champPseudo"
-	        android:layout_below="@+id/champPseudo"
-	        android:ems="10"
-	        android:inputType="textPassword" />
-
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/linearLayout1"
+	        android:layout_marginTop="78dp"
+	        android:text="@string/validInscription"
+	        android:textSize="25sp" />
+	    
 	    <Button
 	        android:id="@+id/CancelButton"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:layout_alignParentBottom="true"
 	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/LoginButton"
+	        android:layout_marginTop="17dp"
 	        android:paddingTop="20dp"
 	        android:text="@string/annuler" />
-
-	    <TextView
-	        android:id="@+id/TextViewPassword"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@+id/champPassword"
-	        android:layout_alignLeft="@+id/TextViewPseudo"
-	        android:text="@string/password"
-	        android:textColor="#FFFFFF"
-	        android:textSize="15sp"
-	        android:textStyle="bold" />
-
-	    <EditText
-	        android:id="@+id/champConfirmPassword"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/champPassword"
-	        android:layout_below="@+id/champPassword"
-	        android:ems="10"
-	        android:inputType="textPassword" />
-
-	    <TextView
-	        android:id="@+id/TextView01"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@+id/champConfirmPassword"
-	        android:layout_alignLeft="@+id/TextViewPassword"
-	        android:text="@string/confirmpasswd"
-	        android:textColor="#FFFFFF"
-	        android:textSize="15sp"
-	        android:textStyle="bold" />
 
 	</RelativeLayout>
 
