@@ -17,20 +17,21 @@ import android.widget.Toast;
 
 public class HomeActivity extends Activity {
 
-
+	Button loginButton;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       
         setContentView(R.layout.activity_home);
-        //setContentView(R.layout.activity_signup);
        
     // --- BILLABONG --- Changement de police pour les button    
-      
+     
       // declaration        
         TextView textViewBillabongOkButton = (TextView) findViewById(R.id.LoginButton);
+       
         TextView textViewBillabongCancelButton = (TextView) findViewById(R.id.CancelButton);
         //TextView textViewBillabongBtnLogin = (TextView) findViewById(R.id.LoginButton);
         //TextView textViewBillabongBtnCancel = (TextView) findViewById(R.id.CancelButton);
-        
+        Log.d("Error", "ici 4");
       //initialisation
         Typeface fontBillabong = Typeface.createFromAsset(getAssets(), "Billabong.ttf");
         textViewBillabongOkButton.setTypeface(fontBillabong);
@@ -60,17 +61,17 @@ public class HomeActivity extends Activity {
         Typeface fontRobotoLight = Typeface.createFromAsset(getAssets(), "Roboto-Light.ttf");
         textViewRobotoLightLogin.setTypeface(fontRobotoLight);
         textViewRobotoLightPassword.setTypeface(fontRobotoLight); */
-
-        final Button loginButton = (Button) findViewById(R.id.ConnectButton);
-        loginButton.setOnClickListener(new OnClickListener() {
-			
+        loginButton = (Button)findViewById(R.id.ConnectButton);
+        Log.d("Error", "ici 5");
+       /* loginButton.setOnClickListener(new OnClickListener() {
+        	 
 			@Override
 			public void onClick(View v) {
 				
 				Intent intent = new Intent (HomeActivity.this, LoginActivity.class);
 				startActivity(intent);
 			}
-		});
+		});*/
     }
     
 

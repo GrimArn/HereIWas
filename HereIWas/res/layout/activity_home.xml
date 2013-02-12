@@ -6,7 +6,7 @@
     tools:context=".HomeActivity" >
 
     <Button
-        android:id="@+id/ConnectButton"
+        android:id="@+id/RegisterButton"
         android:layout_width="125dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
@@ -25,11 +25,11 @@
         android:src="@drawable/maintitleimage" />
 
     <Button
-        android:id="@+id/RegisterButton"
+        android:id="@+id/ConnectButton"
         android:layout_width="125dp"
         android:layout_height="50dp"
-        android:layout_alignLeft="@+id/ConnectButton"
-        android:layout_alignTop="@+id/ConnectButton"
+        android:layout_alignLeft="@+id/RegisterButton"
+        android:layout_alignTop="@+id/RegisterButton"
         android:layout_marginTop="63dp"
         android:text="@string/connexion"
         android:textAlignment="center" />

@@ -17,10 +17,10 @@ public final class R {
     }
     public static final class id {
         public static final int CancelButton=0x7f07000a;
-        public static final int ConnectButton=0x7f070000;
+        public static final int ConnectButton=0x7f070002;
         public static final int LoginButton=0x7f070009;
         public static final int OkButton=0x7f070011;
-        public static final int RegisterButton=0x7f070002;
+        public static final int RegisterButton=0x7f070000;
         public static final int TextView01=0x7f070016;
         public static final int TextViewPassword=0x7f070013;
         public static final int TextViewPseudo=0x7f070014;
