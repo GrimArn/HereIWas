@@ -41,12 +41,11 @@ public class HomeActivity extends Activity {
         // declaration
         TextView textViewRobotoBILogin = (TextView) findViewById(R.id.champLogin);
         TextView textViewRobotoBIPassword = (TextView) findViewById(R.id.champPassword);
-        Log.d("Je suis une erreur", "Je suis passé 1");
         //initialisation
         Typeface fontRobotoBlackItalic = Typeface.createFromAsset(getAssets(), "Roboto-BlackItalic.ttf");
         textViewRobotoBIPassword.setTypeface(fontRobotoBlackItalic);
         
-        Log.d("Je suis une erreur", "Je suis passé 2");
+
         textViewRobotoBILogin.setTypeface(fontRobotoBlackItalic);
         
     
@@ -54,12 +53,12 @@ public class HomeActivity extends Activity {
         // declaration
         TextView textViewRobotoLightLogin = (TextView) findViewById(R.id.champHintLogin);
         TextView textViewRobotoLightPassword = (TextView) findViewById(R.id.champHintPassword);
-        Log.d("Je suis une erreur", "Je suis passé 3");
+     
         //initialisation
         Typeface fontRobotoLight = Typeface.createFromAsset(getAssets(), "Roboto-Light.ttf");
         textViewRobotoLightLogin.setTypeface(fontRobotoLight);
         textViewRobotoLightPassword.setTypeface(fontRobotoLight); 
-        Log.d("Je suis une erreur", "Je suis passé 4");
+
     
     }
 
