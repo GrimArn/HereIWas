@@ -1,0 +1,32 @@
+ // --- BILLABONG --- Changement de police pour les button    
+      
+      // declaration        
+        TextView textViewBillabongOkButton = (TextView) findViewById(R.id.OkButton);
+        
+      //initialisation
+        Typeface fontBillabong = Typeface.createFromAsset(getAssets(), "Billabong.ttf");
+        
+        textViewBillabongOkButton.setTypeface(fontBillabong);
+        
+        
+ // --- ROBOTO BLACK-ITALIC ---- Changement de la police des champs, texte
+      
+        // declaration
+        TextView textViewRobotoBILogin = (TextView) findViewById(R.id.champLogin);
+        TextView textViewRobotoBIPassword = (TextView) findViewById(R.id.champPassword);
+        
+        //initialisation
+        Typeface fontRobotoBlackItalic = Typeface.createFromAsset(getAssets(), "Roboto-BlackItalic.ttf");
+        textViewRobotoBIPassword.setTypeface(fontRobotoBlackItalic);
+        textViewRobotoBILogin.setTypeface(fontRobotoBlackItalic); */
+        
+    
+ // --- ROBOTO-LIGHT --- Police pour les hint des editText 
+        // declaration
+        TextView textViewRobotoLightLogin = (TextView) findViewById(R.id.champHintLogin);
+        TextView textViewRobotoLightPassword = (TextView) findViewById(R.id.champHintPassword);
+     
+        //initialisation
+        Typeface fontRobotoLight = Typeface.createFromAsset(getAssets(), "Roboto-Light.ttf");
+        textViewRobotoLightLogin.setTypeface(fontRobotoLight);
+        textViewRobotoLightPassword.setTypeface(fontRobotoLight); 
