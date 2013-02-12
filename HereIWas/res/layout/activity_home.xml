@@ -31,6 +31,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="61dp"
         android:contentDescription="@string/maintitleimg"
-        android:src="@drawable/MainTitleImage" />
+        android:src="@drawable/maintitleimage" />
 
 </RelativeLayout>

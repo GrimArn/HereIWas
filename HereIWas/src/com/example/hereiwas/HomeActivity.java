@@ -4,6 +4,7 @@ package com.example.hereiwas;
 import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -16,13 +17,13 @@ public class HomeActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_home);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_home);
+        //setContentView(R.layout.activity_signup);
        
     // Changement de police pour le titre    
       
       // declaration        
-        TextView textViewBillabongTitle = (TextView) findViewById(R.id.Title);
+      /*  TextView textViewBillabongTitle = (TextView) findViewById(R.id.Title);
         TextView textViewBillabongTitle2 = (TextView) findViewById(R.id.Title2);
         TextView textViewBillabongBtnLogin = (TextView) findViewById(R.id.LoginButton);
         //TextView textViewBillabongBtnCancel = (TextView) findViewById(R.id.CancelButton);
@@ -32,7 +33,7 @@ public class HomeActivity extends Activity {
         textViewBillabongTitle.setTypeface(fontBillabong);
         textViewBillabongTitle2.setTypeface(fontBillabong);
         textViewBillabongBtnLogin.setTypeface(fontBillabong);
-        //textViewBillabongBtnCancel.setTypeface(fontBillabong);    
+        //textViewBillabongBtnCancel.setTypeface(fontBillabong);   */ 
         
         
    // Changement de la police des champs, texte
@@ -40,22 +41,25 @@ public class HomeActivity extends Activity {
         // declaration
         TextView textViewRobotoBILogin = (TextView) findViewById(R.id.champLogin);
         TextView textViewRobotoBIPassword = (TextView) findViewById(R.id.champPassword);
-      
+        Log.d("Je suis une erreur", "Je suis passé 1");
         //initialisation
         Typeface fontRobotoBlackItalic = Typeface.createFromAsset(getAssets(), "Roboto-BlackItalic.ttf");
-        textViewRobotoBILogin.setTypeface(fontRobotoBlackItalic);
         textViewRobotoBIPassword.setTypeface(fontRobotoBlackItalic);
+        
+        Log.d("Je suis une erreur", "Je suis passé 2");
+        textViewRobotoBILogin.setTypeface(fontRobotoBlackItalic);
+        
     
     // Police pour les hint des editText 
         // declaration
         TextView textViewRobotoLightLogin = (TextView) findViewById(R.id.champHintLogin);
         TextView textViewRobotoLightPassword = (TextView) findViewById(R.id.champHintPassword);
-      
+        Log.d("Je suis une erreur", "Je suis passé 3");
         //initialisation
         Typeface fontRobotoLight = Typeface.createFromAsset(getAssets(), "Roboto-Light.ttf");
         textViewRobotoLightLogin.setTypeface(fontRobotoLight);
         textViewRobotoLightPassword.setTypeface(fontRobotoLight); 
-        
+        Log.d("Je suis une erreur", "Je suis passé 4");
     
     }
 
