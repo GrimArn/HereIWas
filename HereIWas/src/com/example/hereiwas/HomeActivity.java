@@ -26,7 +26,7 @@ public class HomeActivity extends Activity {
     // --- BILLABONG --- Changement de police pour les button    
       
       // declaration        
-        TextView textViewBillabongOkButton = (TextView) findViewById(R.id.OkButton);
+        TextView textViewBillabongOkButton = (TextView) findViewById(R.id.LoginButton);
         TextView textViewBillabongCancelButton = (TextView) findViewById(R.id.CancelButton);
         //TextView textViewBillabongBtnLogin = (TextView) findViewById(R.id.LoginButton);
         //TextView textViewBillabongBtnCancel = (TextView) findViewById(R.id.CancelButton);

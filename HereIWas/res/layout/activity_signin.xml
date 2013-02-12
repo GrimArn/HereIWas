@@ -88,16 +88,6 @@
 	    </LinearLayout>
 
 	    <Button
-	        android:id="@+id/LoginButton"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_below="@+id/linearLayout1"
-	        android:layout_marginTop="78dp"
-	        android:text="@string/validInscription"
-	        android:textSize="25sp" />
-	    
-	    <Button
 	        android:id="@+id/CancelButton"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
@@ -106,6 +96,16 @@
 	        android:layout_marginTop="17dp"
 	        android:paddingTop="20dp"
 	        android:text="@string/annuler" />
+
+	    <Button
+	        android:id="@+id/LoginButton"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/linearLayout1"
+	        android:layout_marginTop="78dp"
+	        android:text="@string/validConnexion"
+	        android:textSize="25sp" />
 
 	</RelativeLayout>
 
