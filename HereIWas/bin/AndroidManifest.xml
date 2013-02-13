@@ -20,7 +20,6 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -37,6 +36,11 @@
             android:label="@string/app_name" >
         </activity>
     
+        <activity 
+            android:name="com.example.hereiwas.SignUpActivity" 
+            android:screenOrientation="fullSensor"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>

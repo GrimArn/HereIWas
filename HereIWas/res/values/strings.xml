@@ -8,8 +8,8 @@
     
     <string name="connexion"			>Connexion		</string>
     <string name="inscription"			>S\'inscrire	</string>
-    <string name="validInscription"		>Sign In		</string>
-    <string name="validConnexion"		>Sign Up		</string>
+    <string name="validInscription"		>Sign Up		</string>
+    <string name="validConnexion"		>Sign In		</string>
     <string name="login"				>Login			</string>
     <string name="password"				>Mot de Passe	</string>
     <string name="confirmpasswd"		>Confirmation	</string>
@@ -23,7 +23,6 @@
     <string name="email"				>your@mail.com	</string>
     <string name="date"					>JJ/MM/AAAA		</string>
     <string name="birthday"				>Anniversaire	</string>
-    <string name="annuler"				>Annuler		</string>
 	<string name="maintitleimg"			>Blabla			</string>
     
 </resources>

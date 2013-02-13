@@ -5,24 +5,27 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
-//1
+//2
 
-public class LoginActivity extends Activity {
+public class SignUpActivity extends Activity {
 	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signin);
+        setContentView(R.layout.activity_signup);
  
      // Changement de police 
         
-        // declaration des TextView pour les boutons
+       /* // declaration des TextView pour les boutons
         TextView textViewBillabongLoginButton 	= (TextView) findViewById(R.id.LoginButton);
         
-        TextView textViewRobotoBILogin 		 = (TextView) findViewById(R.id.champLogin);
-        TextView textViewRobotoBIPassword 	 = (TextView) findViewById(R.id.champPassword);
+        TextView textViewRobotoBIBirthday 	 = (TextView) findViewById(R.id.textViewBirthday);
+        TextView textViewRobotoBIPseudo 	 = (TextView) findViewById(R.id.TextViewPseudo);
+        TextView textViewRobotoBIPasswd 	 = (TextView) findViewById(R.id.TextViewPassword);
+        TextView textViewRobotoBIConfPasswd	 = (TextView) findViewById(R.id.TextViewConfirmPasswd);
         
-        TextView textViewRobotoLightLogin 	 = (TextView) findViewById(R.id.champHintLogin);
-        TextView textViewRobotoLightPassword = (TextView) findViewById(R.id.champHintPassword);
+        TextView textViewRobotoLightLogin 	 		= (TextView) findViewById(R.id.champHintLogin);
+        TextView textViewRobotoLightPassword 		= (TextView) findViewById(R.id.champHintPassword);
+        TextView textViewRobotoLightConfirmPasswd = (TextView) findViewById(R.id.champHintConfirmPasswd);
         
         // declaration de la police
         Typeface fontBillabong 			= Typeface.createFromAsset(getAssets(), "Billabong.ttf");
@@ -32,11 +35,14 @@ public class LoginActivity extends Activity {
         // initialisation de la police sur les TextView
         textViewBillabongLoginButton.setTypeface(fontBillabong);
         
-        textViewRobotoBIPassword.setTypeface(fontRobotoBlackItalic);
-        textViewRobotoBILogin.setTypeface(fontRobotoBlackItalic);
+        textViewRobotoBIBirthday.setTypeface(fontRobotoBlackItalic);
+        textViewRobotoBIPseudo.setTypeface(fontRobotoBlackItalic);
+        textViewRobotoBIPasswd.setTypeface(fontRobotoBlackItalic);
+        textViewRobotoBIConfPasswd.setTypeface(fontRobotoBlackItalic);
         
         textViewRobotoLightLogin.setTypeface(fontRobotoLight);
         textViewRobotoLightPassword.setTypeface(fontRobotoLight);
+        textViewRobotoLightConfirmPasswd.setTypeface(fontRobotoLight); */
 	}
 	
 	@Override

@@ -24,21 +24,35 @@ public class HomeActivity extends Activity {
         TextView textViewBillabongRegisterButton = (TextView) findViewById(R.id.RegisterButton);
         
         // declaration de la police
-        Typeface fontBillabong 			= Typeface.createFromAsset(getAssets(), "Billabong.ttf");
+        Typeface fontBillabong = Typeface.createFromAsset(getAssets(), "Billabong.ttf");
         
         // initialisation de la police sur les TextView
         textViewBillabongConnectButton.setTypeface(fontBillabong);
         textViewBillabongRegisterButton.setTypeface(fontBillabong);
         
      // Interaction entre les activites grace aux boutons
+        // declaration des boutons
+        Button Connexion 	= (Button)findViewById(R.id.RegisterButton);
+        Button Inscription 	= (Button)findViewById(R.id.ConnectButton);
         
-        Button loginButton = (Button)findViewById(R.id.RegisterButton);
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        // declaration du click sur le bouton id/RegisterButton pour la connexion
+        Connexion.setOnClickListener (new View.OnClickListener() {
  
 			@Override
 			public void onClick(View v) {
 				
 				Intent t = new Intent(HomeActivity.this, LoginActivity.class);
+				startActivity(t);
+			}
+		});
+        
+        // declaration du click sur le bouton id/ConnectButton pour l'inscription
+        Inscription.setOnClickListener (new View.OnClickListener() {
+        	 
+			@Override
+			public void onClick(View v) {
+				
+				Intent t = new Intent(HomeActivity.this, SignUpActivity.class);
 				startActivity(t);
 			}
 		});
