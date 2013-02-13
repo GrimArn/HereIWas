@@ -1,9 +1,12 @@
 package com.example.hereiwas;
 //2
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 //1
 
@@ -37,6 +40,21 @@ public class LoginActivity extends Activity {
         
         textViewRobotoLightLogin.setTypeface(fontRobotoLight);
         textViewRobotoLightPassword.setTypeface(fontRobotoLight);
+        
+     // Interaction entre les activites grace aux boutons
+        // declaration des boutons
+        Button Connexion 	= (Button)findViewById(R.id.LoginButton);
+        
+     // declaration du click sur le bouton id/LoginButton pour la connexion sur le menu
+        Connexion.setOnClickListener (new View.OnClickListener() {
+ 
+			@Override
+			public void onClick(View v) {
+				
+				Intent t = new Intent(LoginActivity.this, MenuActivity.class);
+				startActivity(t);
+			}
+		});
 	}
 	
 	@Override
