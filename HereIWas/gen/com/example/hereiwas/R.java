@@ -34,24 +34,18 @@ public final class R {
         public static final int champLogin=0x7f070005;
         public static final int champPassword=0x7f070007;
         public static final int champPseudo=0x7f07000d;
-        public static final int editText1=0x7f07001b;
-        public static final int email_display=0x7f070017;
         public static final int header=0x7f070003;
         public static final int imageView1=0x7f070001;
         public static final int linearLayout=0x7f07000b;
         public static final int linearLayout1=0x7f070004;
-        public static final int menu_forgot_password=0x7f07001d;
-        public static final int menu_settings=0x7f07001c;
-        public static final int password_display=0x7f07001a;
-        public static final int textView1=0x7f070018;
-        public static final int textView2=0x7f070019;
+        public static final int menu_forgot_password=0x7f070018;
+        public static final int menu_settings=0x7f070017;
         public static final int textViewBirthday=0x7f070015;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;
         public static final int activity_signin=0x7f030001;
         public static final int activity_signup=0x7f030002;
-        public static final int login_display=0x7f030003;
     }
     public static final class menu {
         public static final int activity_home=0x7f060000;

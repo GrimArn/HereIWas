@@ -10,7 +10,7 @@
 	    android:layout_height="wrap_content"
 	    android:background="@drawable/background" >
 
-	    <!-- Header  Starts -->
+	    <!-- Header  Start -->
 
 	    <RelativeLayout
 	        android:id="@+id/header"
@@ -30,7 +30,7 @@
 			
 	    </RelativeLayout>
 
-	    <!-- Header Ends -->
+	    <!-- Header End -->
 
 	    <LinearLayout
 	        xmlns:android="http://schemas.android.com/apk/res/android"

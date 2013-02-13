@@ -5,7 +5,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
-//2
+//3
 
 public class SignUpActivity extends Activity {
 	

@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         
-        <!--  <activity
+        <!--  <activityy
             android:name="com.example.hereiwas.LoginActivity"
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="adjustResize|stateVisible" >

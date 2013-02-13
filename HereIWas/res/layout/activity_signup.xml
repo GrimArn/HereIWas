@@ -12,7 +12,7 @@
 	    android:background="@drawable/background"
 	    android:gravity="center" >
 
-	    <!-- Header  Starts -->
+	    <!-- Header  Start -->
 
 	    <RelativeLayout
 	        android:id="@+id/header"
@@ -32,7 +32,7 @@
 			
 	    </RelativeLayout>
 
-	    <!-- Header Ends -->
+	    <!-- Header End -->
 	    
 	    <Button
 	        android:id="@+id/InscriptionButton"

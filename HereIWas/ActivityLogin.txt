@@ -1,4 +1,4 @@
-Contenu ActivityLogin
+Contenu ActivityLogin.java
 
 package com.example.hereiwas;
 
