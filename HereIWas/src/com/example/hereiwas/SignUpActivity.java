@@ -15,9 +15,11 @@ public class SignUpActivity extends Activity {
  
      // Changement de police 
         
-       /* // declaration des TextView pour les boutons
-        TextView textViewBillabongLoginButton 	= (TextView) findViewById(R.id.LoginButton);
+        // declaration des TextView pour les boutons
+       /* TextView textViewBillabongLoginButton 	= (TextView) findViewById(R.id.LoginButton);
+        TextView textViewBillabongPersonnelle 	= (TextView) findViewById(R.id.textViewPersonnelle);
         
+        TextView textViewRobotoBIEmail	 	 = (TextView) findViewById(R.id.textViewEmail);
         TextView textViewRobotoBIBirthday 	 = (TextView) findViewById(R.id.textViewBirthday);
         TextView textViewRobotoBIPseudo 	 = (TextView) findViewById(R.id.TextViewPseudo);
         TextView textViewRobotoBIPasswd 	 = (TextView) findViewById(R.id.TextViewPassword);
@@ -25,7 +27,7 @@ public class SignUpActivity extends Activity {
         
         TextView textViewRobotoLightLogin 	 		= (TextView) findViewById(R.id.champHintLogin);
         TextView textViewRobotoLightPassword 		= (TextView) findViewById(R.id.champHintPassword);
-        TextView textViewRobotoLightConfirmPasswd = (TextView) findViewById(R.id.champHintConfirmPasswd);
+        TextView textViewRobotoLightConfirmPasswd 	= (TextView) findViewById(R.id.champHintConfirmPasswd);
         
         // declaration de la police
         Typeface fontBillabong 			= Typeface.createFromAsset(getAssets(), "Billabong.ttf");
@@ -34,7 +36,9 @@ public class SignUpActivity extends Activity {
         
         // initialisation de la police sur les TextView
         textViewBillabongLoginButton.setTypeface(fontBillabong);
+        textViewBillabongPersonnelle.setTypeface(fontBillabong);
         
+        textViewRobotoBIEmail.setTypeface(fontRobotoBlackItalic);
         textViewRobotoBIBirthday.setTypeface(fontRobotoBlackItalic);
         textViewRobotoBIPseudo.setTypeface(fontRobotoBlackItalic);
         textViewRobotoBIPasswd.setTypeface(fontRobotoBlackItalic);
