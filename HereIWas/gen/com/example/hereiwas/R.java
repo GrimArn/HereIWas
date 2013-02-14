@@ -12,6 +12,7 @@ public final class R {
     }
     public static final class color {
         public static final int colorhere=0x7f040000;
+        public static final int coloriwas=0x7f040001;
     }
     public static final class drawable {
         public static final int avatar=0x7f020000;
@@ -26,38 +27,37 @@ public final class R {
         public static final int ConnectButton=0x7f080000;
         public static final int InscriptionButton=0x7f080012;
         public static final int LinearLayout01=0x7f080007;
+        public static final int LinearLayout1=0x7f080013;
         public static final int LogOutButton=0x7f080003;
         public static final int LoginButton=0x7f080010;
         public static final int MonActuButton=0x7f080006;
         public static final int MonCompteButton=0x7f080008;
         public static final int RegisterButton=0x7f080002;
-        public static final int RelativeLayout1=0x7f08001a;
         public static final int TextViewConfirmPasswd=0x7f080018;
         public static final int TextViewPassword=0x7f080017;
         public static final int TextViewPseudo=0x7f080015;
         public static final int champHintConfirmPasswd=0x7f080019;
-        public static final int champHintDateAnniv=0x7f08001d;
+        public static final int champHintDateAnniv=0x7f08001f;
         public static final int champHintLogin=0x7f08000d;
-        public static final int champHintMail=0x7f08001f;
-        public static final int champHintNom=0x7f080022;
+        public static final int champHintMail=0x7f080021;
+        public static final int champHintNom=0x7f08001d;
         public static final int champHintPassword=0x7f08000f;
-        public static final int champHintPrenom=0x7f080020;
+        public static final int champHintPrenom=0x7f08001c;
+        public static final int champHintPseudo=0x7f080016;
         public static final int champLogin=0x7f08000c;
         public static final int champPassword=0x7f08000e;
-        public static final int champPseudo=0x7f080016;
         public static final int header=0x7f08000b;
-        public static final int imageButtonAvatar=0x7f080021;
+        public static final int imageButtonAvatar=0x7f08001b;
         public static final int imageIamHere=0x7f08000a;
         public static final int imageView1=0x7f080001;
         public static final int imageViewHeader=0x7f080011;
-        public static final int linearLayout=0x7f080013;
         public static final int linearLayout1=0x7f080004;
-        public static final int menu_forgot_password=0x7f080024;
-        public static final int menu_settings=0x7f080023;
-        public static final int textView1=0x7f080014;
-        public static final int textViewBirthday=0x7f08001c;
-        public static final int textViewEmail=0x7f08001e;
-        public static final int textViewPersonnelle=0x7f08001b;
+        public static final int menu_forgot_password=0x7f080023;
+        public static final int menu_settings=0x7f080022;
+        public static final int textViewBirthday=0x7f08001e;
+        public static final int textViewConfidentielle=0x7f080014;
+        public static final int textViewEmail=0x7f080020;
+        public static final int textViewPersonnelle=0x7f08001a;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;

@@ -16,8 +16,9 @@ public class SignUpActivity extends Activity {
      // Changement de police 
         
         // declaration des TextView pour les boutons
-       /* TextView textViewBillabongLoginButton 	= (TextView) findViewById(R.id.LoginButton);
-        TextView textViewBillabongPersonnelle 	= (TextView) findViewById(R.id.textViewPersonnelle);
+        TextView textViewBillabongInscription  = (TextView) findViewById(R.id.InscriptionButton);
+        TextView textViewBillabongPersonnelle 	 = (TextView) findViewById(R.id.textViewPersonnelle);
+        TextView textViewBillabongConfidentielle = (TextView) findViewById(R.id.textViewConfidentielle);
         
         TextView textViewRobotoBIEmail	 	 = (TextView) findViewById(R.id.textViewEmail);
         TextView textViewRobotoBIBirthday 	 = (TextView) findViewById(R.id.textViewBirthday);
@@ -25,7 +26,11 @@ public class SignUpActivity extends Activity {
         TextView textViewRobotoBIPasswd 	 = (TextView) findViewById(R.id.TextViewPassword);
         TextView textViewRobotoBIConfPasswd	 = (TextView) findViewById(R.id.TextViewConfirmPasswd);
         
-        TextView textViewRobotoLightLogin 	 		= (TextView) findViewById(R.id.champHintLogin);
+        TextView textViewRobotoLightPrenom 	 		= (TextView) findViewById(R.id.champHintPrenom);
+        TextView textViewRobotoLightNom 	 		= (TextView) findViewById(R.id.champHintNom);
+        TextView textViewRobotoLightMail	 		= (TextView) findViewById(R.id.champHintMail);
+        TextView textViewRobotoLightAnniv 	 		= (TextView) findViewById(R.id.champHintDateAnniv);
+        TextView textViewRobotoLightPseudo 	 		= (TextView) findViewById(R.id.champHintPseudo);
         TextView textViewRobotoLightPassword 		= (TextView) findViewById(R.id.champHintPassword);
         TextView textViewRobotoLightConfirmPasswd 	= (TextView) findViewById(R.id.champHintConfirmPasswd);
         
@@ -35,8 +40,9 @@ public class SignUpActivity extends Activity {
         Typeface fontRobotoLight 		= Typeface.createFromAsset(getAssets(), "Roboto-Light.ttf");
         
         // initialisation de la police sur les TextView
-        textViewBillabongLoginButton.setTypeface(fontBillabong);
+        textViewBillabongInscription.setTypeface(fontBillabong);
         textViewBillabongPersonnelle.setTypeface(fontBillabong);
+        textViewBillabongConfidentielle.setTypeface(fontBillabong);
         
         textViewRobotoBIEmail.setTypeface(fontRobotoBlackItalic);
         textViewRobotoBIBirthday.setTypeface(fontRobotoBlackItalic);
@@ -44,9 +50,13 @@ public class SignUpActivity extends Activity {
         textViewRobotoBIPasswd.setTypeface(fontRobotoBlackItalic);
         textViewRobotoBIConfPasswd.setTypeface(fontRobotoBlackItalic);
         
-        textViewRobotoLightLogin.setTypeface(fontRobotoLight);
+        textViewRobotoLightPrenom.setTypeface(fontRobotoLight);
+        textViewRobotoLightNom.setTypeface(fontRobotoLight);
+        textViewRobotoLightMail.setTypeface(fontRobotoLight);
+        textViewRobotoLightAnniv.setTypeface(fontRobotoLight);
+        textViewRobotoLightPseudo.setTypeface(fontRobotoLight);
         textViewRobotoLightPassword.setTypeface(fontRobotoLight);
-        textViewRobotoLightConfirmPasswd.setTypeface(fontRobotoLight); */
+        textViewRobotoLightConfirmPasswd.setTypeface(fontRobotoLight);
 	}
 	
 	@Override

@@ -19,6 +19,7 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_home);
    
      // Changement de police 
+        
         // declaration des TextView pour les boutons
         TextView textViewBillabongConnectButton  = (TextView) findViewById(R.id.ConnectButton);
         TextView textViewBillabongRegisterButton = (TextView) findViewById(R.id.RegisterButton);
@@ -31,6 +32,7 @@ public class HomeActivity extends Activity {
         textViewBillabongRegisterButton.setTypeface(fontBillabong);
         
      // Interaction entre les activites grace aux boutons
+        
         // declaration des boutons
         Button Connexion 	= (Button)findViewById(R.id.RegisterButton);
         Button Inscription 	= (Button)findViewById(R.id.ConnectButton);
@@ -57,32 +59,6 @@ public class HomeActivity extends Activity {
 			}
 		});
     }
-        
-/*   // Recuperation du bouton defini dans fichier layout/activity_signin
-        Button loginButton = (Button) findViewById(R.id.RegisterButton);
-        
-   // Declaration d'un listener sur l'evenement OnClick du bouton
-        loginButton.setOnClickListener (new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				
-				// Recuperation des valeurs saisie par l'utilisateur
-				
-				
-				// Transmission des informations a l'activity
-				
-				Intent intent = new Intent (getApplicationContext()), LoginActivity.class);
-        		intent.putExtra();
-        		
-        		// Lancement activité
-        		
-        		startActivity(intent);
-			}
-		}); 
-        
-    } */
-    
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
