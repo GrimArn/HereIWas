@@ -25,9 +25,9 @@ public final class R {
         public static final int ActuButton=0x7f080005;
         public static final int AmisButton=0x7f080009;
         public static final int ConnectButton=0x7f080000;
-        public static final int InscriptionButton=0x7f080012;
+        public static final int GridLayout1=0x7f080012;
+        public static final int InscriptionButton=0x7f080013;
         public static final int LinearLayout01=0x7f080007;
-        public static final int LinearLayout1=0x7f080013;
         public static final int LogOutButton=0x7f080003;
         public static final int LoginButton=0x7f080010;
         public static final int MonActuButton=0x7f080006;
