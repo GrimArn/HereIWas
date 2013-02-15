@@ -40,16 +40,17 @@
             android:id="@+id/GridLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="3"
+            android:columnCount="2"
             android:isScrollContainer="true"
             android:orientation="horizontal" >
 
             <Button
                 android:id="@+id/InscriptionButton"
+                android:layout_width="match_parent"
                 android:layout_columnSpan="2"
                 android:layout_gravity="fill_horizontal"
                 android:layout_marginBottom="20dp"
-                android:layout_row="15"
+                android:layout_row="16"
                 android:text="@string/validInscription" />
 
             <TextView
@@ -57,78 +58,13 @@
                 android:layout_column="0"
                 android:layout_columnSpan="2"
                 android:layout_gravity="fill_horizontal"
-                android:layout_row="8"
+                android:layout_row="9"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="@string/confidentiel"
                 android:textColor="@color/coloriwas"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/TextViewPseudo"
-                android:layout_column="0"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:text="@string/login"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/champHintPseudo"
-                android:layout_width="308dp"
-                android:layout_column="0"
-                android:layout_columnSpan="2"
-                android:layout_gravity="fill_horizontal"
-                android:layout_marginLeft="20dp"
-                android:ems="10"
-                android:inputType="textPersonName" >
-
-                <requestFocus />
-            </EditText>
-
-            <TextView
-                android:id="@+id/TextViewPassword"
-                android:layout_column="0"
-                android:layout_columnSpan="2"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:text="@string/password"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/champHintPassword"
-                android:layout_width="307dp"
-                android:layout_column="0"
-                android:layout_columnSpan="2"
-                android:layout_gravity="fill_horizontal"
-                android:layout_marginLeft="20dp"
-                android:ems="10"
-                android:inputType="textPassword" />
-
-            <TextView
-                android:id="@+id/TextViewConfirmPasswd"
-                android:layout_column="0"
-                android:layout_columnSpan="2"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:text="@string/confirmpasswd"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/champHintConfirmPasswd"
-                android:layout_width="304dp"
-                android:layout_column="0"
-                android:layout_columnSpan="2"
-                android:layout_gravity="fill_horizontal"
-                android:layout_marginLeft="20dp"
-                android:ems="10"
-                android:inputType="textPassword" />
 
             <TextView
                 android:id="@+id/textViewPersonnelle"
@@ -141,13 +77,15 @@
                 android:padding="10dp"
                 android:text="@string/personnelle"
                 android:textColor="@color/colorhere"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-           <!--  <RelaSpace
+            <!--
+                 <RelaSpace
                 android:layout_column="2"
                 android:layout_gravity="fill_vertical"
-                android:layout_row="16" /> -->
+                android:layout_row="16" />
+            -->
 
             <ImageButton
                 android:id="@+id/imageButtonAvatar"
@@ -157,13 +95,70 @@
                 android:layout_row="2"
                 android:src="@drawable/avatar" />
 
+            <TextView
+                android:id="@+id/TextViewConfirmPasswd"
+                android:layout_width="100dp"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_row="12"
+                android:text="@string/confirmpasswd"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TextViewPassword"
+                android:layout_width="101dp"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_row="11"
+                android:text="@string/password"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TextViewPseudo"
+                android:layout_width="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_row="10"
+                android:text="@string/login"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TextViewEmail"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_row="4"
+                android:text="@string/emailtexte"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewBirthday"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_row="8"
+                android:text="@string/birthday"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/champHintNom"
-                android:layout_width="wrap_content"
+                android:layout_width="183dp"
                 android:layout_column="1"
                 android:layout_gravity="center_horizontal|bottom"
-                android:layout_margin="2dp"
-                android:layout_marginBottom="11dp"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_row="2"
                 android:ems="10"
                 android:hint="@string/nom"
@@ -171,58 +166,71 @@
 
             <EditText
                 android:id="@+id/champHintPrenom"
+                android:layout_width="183dp"
                 android:layout_column="1"
                 android:layout_gravity="center_horizontal|top"
-                android:layout_margin="2dp"
+                android:layout_margin="10dp"
                 android:layout_row="2"
                 android:ems="10"
                 android:hint="@string/prenom"
                 android:inputType="textPersonName" />
-
+				
+				<requestFocus />
+				
             <EditText
                 android:id="@+id/champHintMail"
-                android:layout_width="wrap_content"
+                android:layout_width="183dp"
                 android:layout_column="1"
-                android:layout_gravity="center"
-                android:layout_margin="2dp"
-                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal|top"
                 android:layout_row="4"
                 android:ems="10"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress" />
 
-            <TextView
-                android:id="@+id/textViewEmail"
-                android:layout_column="0"
-                android:layout_gravity="right|bottom"
-                android:layout_marginLeft="10dp"
-                android:layout_row="4"
-                android:text="@string/emailtexte"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
             <EditText
                 android:id="@+id/champHintDateAnniv"
-                android:layout_width="wrap_content"
+                android:layout_width="183dp"
                 android:layout_column="1"
-                android:layout_gravity="center"
-                android:layout_row="7"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_row="8"
                 android:ems="10"
                 android:hint="@string/date"
                 android:inputType="date" />
 
-            <TextView
-                android:id="@+id/textViewBirthday"
-                android:layout_column="0"
-                android:layout_gravity="left|center_vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_row="7"
-                android:text="@string/birthday"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-        
+            <EditText
+                android:id="@+id/champHintPseudo"
+                android:layout_width="183dp"
+                android:layout_column="1"
+                android:layout_gravity="left|top"
+                android:layout_row="10"
+                android:ems="10"
+                android:hint="@string/login"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/champHintPassword"
+                android:layout_width="183dp"
+                android:layout_column="1"
+                android:layout_gravity="left|top"
+                android:layout_row="11"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/champHintConfirmPasswd"
+                android:layout_width="183dp"
+                android:layout_column="1"
+                android:layout_gravity="left|top"
+                android:layout_row="12"
+                android:ems="10"
+                android:hint="@string/confirmpasswd"
+                android:inputType="textPassword" >
+
+                <requestFocus />
+            </EditText>
+
         </GridLayout>
+
     </ScrollView>
 </RelativeLayout>

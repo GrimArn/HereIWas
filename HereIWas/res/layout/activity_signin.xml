@@ -54,7 +54,7 @@
 	            android:layout_height="wrap_content"
 	            android:layout_marginBottom="20dip"
 	            android:layout_marginTop="5dip"
-	            android:hint="@string/email"
+	            android:hint="@string/login"
 	            android:singleLine="true" >
 
 	            <requestFocus />
