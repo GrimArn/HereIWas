@@ -17,53 +17,62 @@ public final class R {
     public static final class drawable {
         public static final int avatar=0x7f020000;
         public static final int background=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int maintitleimage=0x7f020003;
-        public static final int plan=0x7f020004;
+        public static final int fleuractu=0x7f020002;
+        public static final int fleuramis=0x7f020003;
+        public static final int fleurjsuisici=0x7f020004;
+        public static final int fleurmesinfos=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int maintitleimage=0x7f020007;
+        public static final int menubackgroud=0x7f020008;
+        public static final int plan=0x7f020009;
     }
     public static final class id {
-        public static final int ActuButton=0x7f080005;
-        public static final int AmisButton=0x7f080009;
-        public static final int ConnectButton=0x7f080000;
+        public static final int ConnectButton=0x7f080001;
         public static final int GridLayout1=0x7f080012;
         public static final int InscriptionButton=0x7f080013;
-        public static final int LinearLayout01=0x7f080007;
-        public static final int LogOutButton=0x7f080003;
+        public static final int LogOutButton=0x7f080005;
         public static final int LoginButton=0x7f080010;
-        public static final int MonActuButton=0x7f080006;
-        public static final int MonCompteButton=0x7f080008;
-        public static final int RegisterButton=0x7f080002;
+        public static final int RegisterButton=0x7f080003;
         public static final int TextViewConfirmPasswd=0x7f080018;
         public static final int TextViewPassword=0x7f080017;
         public static final int TextViewPseudo=0x7f080015;
         public static final int champHintConfirmPasswd=0x7f080019;
-        public static final int champHintDateAnniv=0x7f08001f;
+        public static final int champHintDateAnniv=0x7f080020;
         public static final int champHintLogin=0x7f08000d;
-        public static final int champHintMail=0x7f080021;
-        public static final int champHintNom=0x7f08001d;
+        public static final int champHintMail=0x7f08001e;
+        public static final int champHintNom=0x7f08001c;
         public static final int champHintPassword=0x7f08000f;
-        public static final int champHintPrenom=0x7f08001c;
+        public static final int champHintPrenom=0x7f08001d;
         public static final int champHintPseudo=0x7f080016;
         public static final int champLogin=0x7f08000c;
         public static final int champPassword=0x7f08000e;
-        public static final int header=0x7f08000b;
+        public static final int header=0x7f08000a;
+        public static final int imageButtonActu=0x7f080007;
         public static final int imageButtonAvatar=0x7f08001b;
-        public static final int imageIamHere=0x7f08000a;
-        public static final int imageView1=0x7f080001;
+        public static final int imageButtonJeSuisIci=0x7f080009;
+        public static final int imageButtonMesAmis=0x7f080008;
+        public static final int imageButtonMesInfos=0x7f080004;
+        public static final int imageView1=0x7f080002;
+        public static final int imageViewBackground=0x7f080006;
         public static final int imageViewHeader=0x7f080011;
-        public static final int linearLayout1=0x7f080004;
+        public static final int linearLayout1=0x7f08000b;
         public static final int menu_forgot_password=0x7f080023;
         public static final int menu_settings=0x7f080022;
-        public static final int textViewBirthday=0x7f08001e;
+        public static final int textView1=0x7f080000;
+        public static final int textViewBirthday=0x7f080021;
         public static final int textViewConfidentielle=0x7f080014;
-        public static final int textViewEmail=0x7f080020;
+        public static final int textViewEmail=0x7f08001f;
         public static final int textViewPersonnelle=0x7f08001a;
     }
     public static final class layout {
-        public static final int activity_home=0x7f030000;
-        public static final int activity_menu=0x7f030001;
-        public static final int activity_signin=0x7f030002;
-        public static final int activity_signup=0x7f030003;
+        public static final int activity_actualite=0x7f030000;
+        public static final int activity_amis=0x7f030001;
+        public static final int activity_home=0x7f030002;
+        public static final int activity_infos=0x7f030003;
+        public static final int activity_jesuisici=0x7f030004;
+        public static final int activity_menu=0x7f030005;
+        public static final int activity_signin=0x7f030006;
+        public static final int activity_signup=0x7f030007;
     }
     public static final class menu {
         public static final int activity_home=0x7f070000;

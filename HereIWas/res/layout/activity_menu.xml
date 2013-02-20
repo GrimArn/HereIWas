@@ -1,87 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/imageButtonMesInfos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
- 												>
+    android:background="@drawable/background" >
 
-	    <Button
-	        android:id="@+id/LogOutButton"
-	        android:layout_width="130dp"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentRight="true"
-	        android:layout_alignParentTop="true"
-	        android:text="@string/deconnexion"
-	        android:textAlignment="center"
-	        android:textSize="26sp"  />
+    <Button
+        android:id="@+id/LogOutButton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/deconnexion"
+        android:textSize="20sp" />
 
-	    <LinearLayout
-	        xmlns:android="http://schemas.android.com/apk/res/android"
-	        android:id="@+id/linearLayout1"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_below="@+id/LogOutButton"
-	        android:layout_marginTop="36dp"
-	        android:orientation="horizontal"
-	        android:padding="10dip" >
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:src="@drawable/menubackgroud" />
 
-	        <Button
-	            android:id="@+id/ActuButton"
-	            android:layout_width="130dp"
-	            android:layout_height="wrap_content"
-	            android:text="@string/filactu"
-	            android:textAlignment="center"
-	            android:textSize="12sp" />
+    <ImageButton
+        android:id="@+id/imageButtonActu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageViewBackground"
+        android:layout_below="@+id/LogOutButton"
+        android:layout_marginTop="106dp"
+        android:src="@drawable/fleuractu" />
 
-	        <Button
-	            android:id="@+id/MonActuButton"
-	            android:layout_width="130dp"
-	            android:layout_height="wrap_content"
-	            android:layout_marginLeft="40dp"
-	            android:text="@string/monactu"
-	            android:textAlignment="center"
-	            android:textSize="12sp" />
+    <ImageButton
+        android:id="@+id/imageButtonMesAmis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageButtonJeSuisIci"
+        android:layout_alignTop="@+id/imageButtonActu"
+        android:layout_marginTop="142dp"
+        android:src="@drawable/fleuramis" />
 
-	    </LinearLayout>
+    <ImageButton
+        android:id="@+id/imageButtonMesInfos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageButtonActu"
+        android:layout_alignTop="@+id/imageButtonMesAmis"
+        android:src="@drawable/fleurmesinfos" />
 
+    <ImageButton
+        android:id="@+id/imageButtonJeSuisIci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageButtonActu"
+        android:layout_alignRight="@+id/imageViewBackground"
+        android:layout_marginRight="31dp"
+        android:src="@drawable/fleurjsuisici" />
 
-	    <LinearLayout
-	        xmlns:android="http://schemas.android.com/apk/res/android"
-	        android:id="@+id/LinearLayout01"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentBottom="true"
-	        android:layout_alignParentLeft="true"
-	        android:layout_marginBottom="91dp"
-	        android:orientation="horizontal"
-	        android:padding="10dip" >
-
-	        <Button
-	            android:id="@+id/MonCompteButton"
-	            android:layout_width="130dp"
-	            android:layout_height="wrap_content"
-	            android:text="@string/moncompte"
-	            android:textAlignment="center"
-	            android:textSize="12sp" />
-
-	        <Button
-	            android:id="@+id/AmisButton"
-	            android:layout_width="130dp"
-	            android:layout_height="wrap_content"
-	            android:layout_marginLeft="40dp"
-	            android:text="@string/mesamis"
-	            android:textAlignment="center"
-	            android:textSize="12sp" />
-	    </LinearLayout>
-
-	    <ImageButton
-	        android:id="@+id/imageIamHere"
-	        android:layout_width="100dp"
-	        android:layout_height="68dp"
-	        android:layout_centerHorizontal="true"
-	        android:layout_centerVertical="true"
-	        android:src="@drawable/plan" />
-
-	</RelativeLayout>
+</RelativeLayout>
