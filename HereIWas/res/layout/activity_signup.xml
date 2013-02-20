@@ -48,9 +48,13 @@
                 android:id="@+id/InscriptionButton"
                 android:layout_columnSpan="2"
                 android:layout_gravity="fill_horizontal"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="15dp"
                 android:layout_row="15"
-                android:text="@string/validInscription" />
+                android:text="@string/validInscription" 
+                android:gravity="center"
+                android:textColor="#ffffff"
+       			android:background="@drawable/custom_button_selector"/>
 
             <TextView
                 android:id="@+id/textViewConfidentielle"
@@ -62,7 +66,7 @@
                 android:padding="10dp"
                 android:text="@string/confidentiel"
                 android:textColor="@color/coloriwas"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -83,6 +87,7 @@
                 android:layout_gravity="fill_horizontal"
                 android:layout_marginLeft="20dp"
                 android:ems="10"
+                android:hint="@string/login"
                 android:inputType="textPersonName" >
 
                 <requestFocus />
@@ -141,13 +146,8 @@
                 android:padding="10dp"
                 android:text="@string/personnelle"
                 android:textColor="@color/colorhere"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
-
-           <!--  <RelaSpace
-                android:layout_column="2"
-                android:layout_gravity="fill_vertical"
-                android:layout_row="16" /> -->
 
             <ImageButton
                 android:id="@+id/imageButtonAvatar"
@@ -191,17 +191,6 @@
                 android:hint="@string/email"
                 android:inputType="textEmailAddress" />
 
-            <TextView
-                android:id="@+id/textViewEmail"
-                android:layout_column="0"
-                android:layout_gravity="right|bottom"
-                android:layout_marginLeft="10dp"
-                android:layout_row="4"
-                android:text="@string/emailtexte"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                android:textStyle="bold" />
-
             <EditText
                 android:id="@+id/champHintDateAnniv"
                 android:layout_width="wrap_content"
@@ -219,6 +208,17 @@
                 android:layout_marginLeft="10dp"
                 android:layout_row="7"
                 android:text="@string/birthday"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_column="0"
+                android:layout_gravity="right|bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_row="4"
+                android:text="@string/emailtexte"
                 android:textColor="#FFFFFF"
                 android:textSize="15sp"
                 android:textStyle="bold" />

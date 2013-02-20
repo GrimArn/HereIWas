@@ -6,7 +6,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,10 +27,10 @@ public class MenuActivity extends Activity {
         
      // Interaction entre les activites grace aux boutons
         // declaration des image button
-        ImageButton ButtonActu 		= (ImageButton) findViewById(R.id.imageButtonActu);
-        ImageButton ButtonMesAmis	= (ImageButton) findViewById(R.id.imageButtonMesAmis);
-        ImageButton ButtonMesInfos	= (ImageButton) findViewById(R.id.imageButtonMesInfos);
-        ImageButton ButtonJeSuisIci	= (ImageButton) findViewById(R.id.imageButtonJeSuisIci);        
+        ImageView 	ButtonActu 		= (ImageView) findViewById(R.id.imageViewActu);
+        ImageView 	ButtonMesAmis	= (ImageView) findViewById(R.id.imageViewAmis);
+        ImageView 	ButtonMesInfos	= (ImageView) findViewById(R.id.imageViewMesInfos);
+        ImageView 	ButtonJeSuisIci	= (ImageView) findViewById(R.id.imageViewJsuisIci);        
         
         // declaration du click sur l'image id/imageButtonActu
         ButtonActu.setOnClickListener (new View.OnClickListener() {

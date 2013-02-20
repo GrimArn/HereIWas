@@ -4,19 +4,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context=".HomeActivity" >
-
-    <Button
-        android:id="@+id/ConnectButton"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="130dp"
-        android:textSize="25sp"
-        android:text="@string/inscription" />
 	
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageViewHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -26,14 +16,29 @@
         android:src="@drawable/maintitleimage" />
 
     <Button
-        android:id="@+id/RegisterButton"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/ConnectButton"
-        android:layout_alignTop="@+id/ConnectButton"
-        android:layout_marginTop="63dp"
-        android:textSize="25sp"
+        android:id="@+id/ConnectButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/custom_button_selector"
+        android:gravity="center"
         android:text="@string/connexion"
-        android:textAlignment="center" />
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/RegisterButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/ConnectButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/custom_button_selector"
+        android:gravity="center"
+        android:text="@string/inscription"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
 
 </RelativeLayout>

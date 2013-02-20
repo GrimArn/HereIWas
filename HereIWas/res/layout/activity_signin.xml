@@ -3,93 +3,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background" >
 
-	    <!-- Header  Start -->
+    <!-- Header  Start -->
 
-	  <RelativeLayout
-	        android:id="@+id/header"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentTop="true"
-	        android:paddingBottom="5dip"
-	        android:paddingTop="5dip" >
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
 
-	        <ImageView
-	            android:id="@+id/imageView1"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_centerHorizontal="true"
-	            android:contentDescription="@string/maintitleimg"
-	            android:src="@drawable/maintitleimage" />
-			
-	    </RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/maintitleimg"
+            android:src="@drawable/maintitleimage" />
+    </RelativeLayout>
 
-	    <!-- Header End -->
+    <!-- Header End -->
 
-	    <LinearLayout
-	        xmlns:android="http://schemas.android.com/apk/res/android"
-	        android:id="@+id/linearLayout1"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_below="@+id/header"
-	        android:layout_marginTop="31dp"
-	        android:orientation="vertical"
-	        android:padding="10dip" >
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/linearLayout1"
+        android:layout_below="@+id/header"
+        android:fillViewport="true"
+        android:isScrollContainer="true" >
 
-	        <TextView
-	            android:id="@+id/champLogin"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_marginLeft="5dip"
-	            android:text="@string/login"
-	            android:textColor="#FFFFFF"
-	            android:textSize="20sp" 
-	            android:textStyle="bold"/>
-  
-	        <EditText
-	            android:id="@+id/champHintLogin"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_marginBottom="20dip"
-	            android:layout_marginTop="5dip"
-	            android:hint="@string/email"
-	            android:singleLine="true" >
+    </ScrollView>
 
-	            <requestFocus />
-	        </EditText>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="31dp"
+        android:orientation="vertical"
+        android:padding="10dip" >
 
-	        <TextView
-	            android:id="@+id/champPassword"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_marginLeft="5dip"
-	            android:text="@string/password"
-	            android:textColor="#FFFFFF"
-	            android:textSize="20sp"
-	            android:textStyle="bold" />
-	        
-	        <EditText
-	            android:id="@+id/champHintPassword"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_marginTop="5dip"
-	            android:hint="@string/password"
-	            android:inputType="textPassword"
-	            android:singleLine="true" />
+        <TextView
+            android:id="@+id/champLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:text="@string/login"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/champHintLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="5dip"
+            android:hint="@string/email"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/champPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:text="@string/password"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/champHintPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/LoginButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="78dp"
+            android:text="@string/validConnexion"
+            android:textSize="25sp" 
+            android:gravity="center"
+            android:textColor="#ffffff"
+       		android:background="@drawable/custom_button_selector"/>
+
+    </LinearLayout>
 
 
-	    </LinearLayout>
-
-	    <Button
-	        android:id="@+id/LoginButton"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_below="@+id/linearLayout1"
-	        android:layout_marginTop="78dp"
-	        android:text="@string/validConnexion"
-	        android:textSize="25sp" />
-
-		</RelativeLayout>
+</RelativeLayout>
