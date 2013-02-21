@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name"				>Here I Was		</string>
-    <string name="here"					>Here			</string>
-    <string name="iwas"					>I\ Was			</string>
-    <string name="hereiwas"				>Here I Was		</string>
+    <string name="app_name"				>Here I Was				</string>
+    <string name="here"					>Here					</string>
+    <string name="iwas"					>I\ Was					</string>
+    <string name="hereiwas"				>Here I Was				</string>
     
     <string name="connexion"			>Connexion				</string>
     <string name="inscription"			>S\'inscrire			</string>
@@ -17,23 +17,24 @@
     <string name="personnelle"			>Partie Personnelle		</string>
     <string name="confidentiel"			>Partie Confidentielle	</string>
     
-    <string name="menu_settings"		>Settings		</string>
-    <string name="femme"				>Femme			</string>
-   	<string name="homme"				>Homme			</string>
-    <string name="autre"				>Autre			</string>
-    <string name="prenom"				>Prénom			</string>
-    <string name="nom"					>Nom			</string>
-    <string name="emailtexte"			>Email			</string>
-    <string name="email"				>your@mail.com	</string>
-    <string name="date"					>JJ/MM/AAAA		</string>
-    <string name="birthday"				>Anniversaire	</string>
-	<string name="maintitleimg"			>Blablaa		</string>
+    <string name="menu_settings"		>Settings				</string>
+    <string name="femme"				>Femme					</string>
+   	<string name="homme"				>Homme					</string>
+    <string name="autre"				>Autre					</string>
+    <string name="prenom"				>Prénom					</string>
+    <string name="nom"					>Nom					</string>
+    <string name="emailtexte"			>Email					</string>
+    <string name="email"				>your@mail.com			</string>
+    <string name="date"					>JJ/MM/AAAA				</string>
+    <string name="birthday"				>Anniversaire			</string>
+	<string name="maintitleimg"			>Blablaa				</string>
+	<string name="mdpforget"			>Mot\ de\ passe\ oublie ?</string>
 	
-	<string name="filactu"				>Fil\ d\'actualité</string>
-	<string name="monactu"				>Mon\ Actualité	</string>
-	<string name="jesuisici"			>Je\ suis\ ici	</string>
-	<string name="moncompte"			>Mon Compte		</string>
-	<string name="mesamis"				>Mes Amis		</string>
+	<string name="filactu"				>Fil\ d\'actualité		</string>
+	<string name="monactu"				>Mon\ Actualité			</string>
+	<string name="jesuisici"			>Je\ suis\ ici			</string>
+	<string name="moncompte"			>Mon Compte				</string>
+	<string name="mesamis"				>Mes Amis				</string>
     
 </resources>
 

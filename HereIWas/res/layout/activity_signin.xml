@@ -28,13 +28,13 @@
 
     <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignBottom="@+id/linearLayout1"
         android:layout_below="@+id/header"
         android:fillViewport="true"
         android:isScrollContainer="true" >
-
     </ScrollView>
 
     <LinearLayout
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dip"
             android:text="@string/login"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/textview"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dip"
             android:layout_marginTop="5dip"
-            android:hint="@string/login"
+            android:hint="@string/email"
             android:singleLine="true" >
 
             <requestFocus />
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dip"
             android:text="@string/password"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/textview"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -94,13 +94,22 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_marginTop="78dp"
-            android:text="@string/validConnexion"
-            android:textSize="25sp" 
+            android:background="@drawable/custom_button_selector"
             android:gravity="center"
-            android:textColor="#ffffff"
-       		android:background="@drawable/custom_button_selector"/>
-
+            android:text="@string/validConnexion"
+            android:textColor="@color/textview"
+            android:textSize="25sp" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="@string/mdpforget"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/forgetmdp" />
 
 </RelativeLayout>

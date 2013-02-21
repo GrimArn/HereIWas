@@ -2,4 +2,6 @@
 <resources>
     <color name="colorhere"	>#F6E497</color>
     <color name="coloriwas"	>#FFFFCC</color>
+    <color name="forgetmdp" >#F8F8FF</color>
+    <color name="textview"	>#FFFFFF</color>
 </resources>
