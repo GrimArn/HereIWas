@@ -1,0 +1,40 @@
+Base de données
+
+USER :
+
+	NUMID	integer
+	PSEUDO	text
+	PRENOM	text
+	NOM		text
+	ANNIV	integer
+	MAIL	text
+	MDP		text
+	
+BONCOINS:
+
+	IDBONCOIN	integer
+	NOM			text
+	PHOTO		text/chemin
+	DESCRIPTION	text
+
+ACTU:
+
+	IDACTU		integer
+	DATE		text
+	STATUT		text		//appel un bon coin
+	
+JAIME:						// lie a actualité
+
+	IDJAIME		integer
+	
+COMMENTAIRE :
+
+	IDCOM		integer
+	
+	
+	
+	
+//- Date parse (String string)
+pour obtenir une date en fonction d'une représentation textuelle
+String strDate = "09:48:25 21/02/2013";
+Date date = dateFormat.parse (strDate);

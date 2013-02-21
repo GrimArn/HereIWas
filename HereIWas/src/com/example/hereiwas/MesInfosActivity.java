@@ -1,11 +1,16 @@
 package com.example.hereiwas;
 
 import android.app.Activity;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 
 public class MesInfosActivity extends Activity {
 
+	// Declaration des variables base de donnee
+	private SQLiteDatabase bdd;
+	private BaseDonnee maBaseSQLite;
+		
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infos);
@@ -34,6 +39,25 @@ public class MesInfosActivity extends Activity {
 				startActivity(t);
 			}
 		}); */
+	}
+	
+	// Partie BASE DE DONNEE
+	
+	// Ouverture de la base de donnée en écriture
+	public void open() {
+
+		bdd = maBaseSQLite.getWritableDatabase();
+	}
+
+	// Fermeture acces de la base de donnée
+	public void close() {
+
+		bdd.close();
+	}
+
+	public SQLiteDatabase getBDD() {
+
+		return bdd;
 	}
 	
 	@Override
