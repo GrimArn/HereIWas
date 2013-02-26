@@ -1,0 +1,82 @@
+Dans un premier jet (ce qui me vient à l'esprit :) )
+
+- connexion :
+	+ que tous les champs soit remplis avant le clic, sinon affichage popup		CHECK
+	
+- inscription :
+    + que tous les champs soit rempli avant le clic, sinon affichage popup
+    + les champs mdp et confirm mdp soient identiques
+    + mdp fasse plus de x caractères (à fixer)
+    + Avatar, puisse choisir sa photo de profil dans la galerie ou dans autres choses avec l'affichage d'un petit menu popup.
+
+Amis :
+Si j'ai bien compris, tu t'en occupe, mais je n'ai pas tout compris :(
+
+Je suis ici :
+     + petit barre en haut avec des icônes pour indiquer position sur maps.
+
+Actu :
+     + ....
+
+@Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.button2){
+             
+            tempCorps1.getText().clear();
+            temp1.getText().clear();
+            poid1.getText().clear();
+            resultat.setText(defaut);
+        }
+        else if(v.getId() == R.id.button1){
+            if(tempCorps1.getText().length() <= 0 || temp1.getText().length() <= 0 || poid1.getText().length() <= 0){
+                 
+                resultat.setText("Vous n'avez pas rempli tout les champs");
+                 
+            }
+                          
+                        else{
+                             String tpc = tempCorps1.getText().toString();
+                 String tp = temp1.getText().toString();
+                 String m = poid1.getText().toString();
+            }
+            
+if (readString.equals(name1))
+{
+	if (name1.equals(""))
+	{
+		Toast.makeText(this,"tapez votre champ ",Toast.LENGTH_SHORT).show(); 	
+	}
+	else 
+	{
+		Toast.makeText(this,"Mot de passe Correct",Toast.LENGTH_SHORT).show();	   		    
+		startActivity(new Intent(this, MainListActivity.class));		
+	} 	         
+} 
+else
+{
+	Toast.makeText(this,"Mot de passe Incorrect",Toast.LENGTH_SHORT).show();
+}
+
+@Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+ 
+        context = this;
+        editText = (EditText) findViewById(R.id.name);
+        button = (Button) findViewById(R.id.button);
+ 
+        button.setOnClickListener(new OnClickListener() {
+ 
+            public void onClick(View v) {
+                if (editText.getText().toString().equals("")) {
+                    Toast.makeText(context, R.string.error, 1000).show();
+                } else {
+                    Intent intent = new Intent(context, HelloActivity.class);
+                    intent.putExtra("Name", editText.getText().toString());
+                    context.startActivity(intent);
+                }
+ 
+            }
+        });
+    }

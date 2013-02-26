@@ -1,10 +1,16 @@
 package com.example.hereiwas;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import android.app.Activity;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MesAmisActivity extends Activity {
@@ -21,7 +27,7 @@ public class MesAmisActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_amis);
 
-		// Declaration de la listview Fiend
+		// Récupération du ListView présent dans notre IHM
 		ListFriend = (ListView) findViewById(R.id.ListFriend);
 
 		/*
@@ -44,6 +50,8 @@ public class MesAmisActivity extends Activity {
 		// Affichage des utilisateurs dans la listViews
 		AddUsr();
 		UserAdapter adapter = new UserAdapter(this, FriendList);
+		
+		// On passe nos données au composant ListView
 		ListFriend.setAdapter(adapter);
 	}
 
