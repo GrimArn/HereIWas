@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/background"
@@ -27,7 +28,7 @@
     <!-- Header End -->
 
     <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/header"
@@ -35,8 +36,6 @@
         android:isScrollContainer="true" >
 
         <GridLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/GridLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -149,8 +148,8 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <ImageButton
-                android:id="@+id/imageButtonAvatar"
+            <QuickContactBadge
+                android:id="@+id/imageAvatar"
                 android:layout_column="0"
                 android:layout_gravity="center_horizontal|top"
                 android:layout_marginTop="23dp"

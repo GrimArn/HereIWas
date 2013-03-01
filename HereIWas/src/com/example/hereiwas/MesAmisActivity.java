@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ListView;
-import android.widget.TextView;
 
+@SuppressLint("SimpleDateFormat")
 public class MesAmisActivity extends Activity {
 
 	// Declaration des variables base de donnee
@@ -27,25 +27,13 @@ public class MesAmisActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_amis);
 
+		/*
+		 // Changement de police 
+		  	PoliceAmis();
+		*/
+		
 		// Récupération du ListView présent dans notre IHM
 		ListFriend = (ListView) findViewById(R.id.ListFriend);
-
-		/*
-		 * // Changement de police 
-		 * 	PoliceAmis();
-		 * 
-		 * // Interaction entre les activites grace aux boutons 
-		 * 	// declaration de l'image clickable
-		 * 
-		 * 
-		 * // declaration du click sur l'image id/imageIamHere pour revenir a lactivite home 
-		 * .setOnClickListener (new View.OnClickListener() {
-		 * 
-		 * 	@Override public void onClick(View v) {
-		 * 
-		 * 	Intent t = new Intent(MenuActivity.this, HomeActivity.class);
-		 * startActivity(t); } });
-		 */
 
 		// Affichage des utilisateurs dans la listViews
 		AddUsr();
@@ -60,9 +48,9 @@ public class MesAmisActivity extends Activity {
 		FriendList.clear();
 		Date Now = new Date();
 
-		/**
-		 * Fonction a modifier !!
-		 */
+	/**
+	 * Fonction a modifier !!
+	 */
 		SimpleDateFormat formater = null;
 		formater = new SimpleDateFormat("dd-MM-yy");
 		formater.format(Now);
@@ -91,18 +79,17 @@ public class MesAmisActivity extends Activity {
 		return bdd;
 	}
 
-	public void PoliceAmis() {
+	/*public void PoliceAmis() {
 
 		// declaration des TextView pour les boutons
-		TextView textViewBillabongDeconnexion = (TextView) findViewById(R.id.textViewAmis);
+		TextView textViewBillabongDeconnexion = (TextView) findViewById(R.id.ListFriend);
 
 		// declaration de la police
-		Typeface fontBillabong = Typeface.createFromAsset(getAssets(),
-				"Billabong.ttf");
+		Typeface fontBillabong = Typeface.createFromAsset(getAssets(), "Billabong.ttf");
 
 		// initialisation de la police sur les TextView
 		textViewBillabongDeconnexion.setTypeface(fontBillabong);
-	}
+	} */
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

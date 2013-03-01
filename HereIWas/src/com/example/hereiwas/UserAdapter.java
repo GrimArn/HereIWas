@@ -21,6 +21,7 @@ public class UserAdapter extends BaseAdapter {
 		this.user = user;
 			
 	}
+	
 	@Override
 	public int getCount() {
 		return user.size();

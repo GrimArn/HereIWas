@@ -1,7 +1,10 @@
 package com.example.hereiwas;
 
-//2
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
@@ -11,7 +14,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-//1
 import android.widget.Toast;
 
 public class LoginActivity extends Activity {
@@ -19,6 +21,8 @@ public class LoginActivity extends Activity {
 	// Declaration des variables base de donnee
 	private SQLiteDatabase bdd;
 	private BaseDonnee maBaseSQLite;
+	
+	private static final int DIALOG_ALERT = 10;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -32,14 +36,14 @@ public class LoginActivity extends Activity {
 		// declaration des boutons
 		Button Connexion = (Button) findViewById(R.id.LoginButton);
 
-		// declaration du click sur le bouton id/LoginButton pour la connexion
-		// sur le menu
+		// declaration du click sur le bouton id/LoginButton pour la connexion sur le menu
 		Connexion.setOnClickListener(new View.OnClickListener() {
 
+			@SuppressWarnings("deprecation")
 			@Override
 			public void onClick(View v) {
 
-				// Declaration des variables
+				// Declaration des variables pour controle des données
 				EditText ChampLogin = (EditText) findViewById(R.id.champHintLogin);
 				EditText ChampPasswd = (EditText) findViewById(R.id.champHintPassword);
 				String Login = ChampLogin.getText().toString();
@@ -51,14 +55,43 @@ public class LoginActivity extends Activity {
 
 					Toast.makeText(LoginActivity.this, "Tous les champs ne sont pas remplis", Toast.LENGTH_SHORT).show();
 				}
-
+				
 				else {
-					Intent t = new Intent(LoginActivity.this, MenuActivity.class);
-					startActivity(t);
+					showDialog(DIALOG_ALERT);
 				}
-
 			}
 		});
+	}
+
+	@SuppressWarnings("deprecation")
+	@Override
+	protected Dialog onCreateDialog(int id) {
+		switch (id) {
+		case DIALOG_ALERT:
+			// Create out AlterDialog
+			Builder builder = new AlertDialog.Builder(this);
+			builder.setMessage("	Felicitation !\n\n		Vous etes maintenant connecté \n");
+			builder.setCancelable(true);
+			builder.setPositiveButton("OK", new OkOnClickListener());
+			AlertDialog dialog = builder.create();
+			dialog.show();
+		}
+		return super.onCreateDialog(id);
+	}
+
+	private final class OkOnClickListener implements DialogInterface.OnClickListener {
+		public void onClick(DialogInterface dialog, int which) {
+			LoginActivity.this.finish();
+			Intent t = new Intent(LoginActivity.this, MenuActivity.class);
+			startActivity(t);
+		}
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		super.onCreateOptionsMenu(menu);
+		getMenuInflater().inflate(R.menu.activity_login, menu);
+		return true;
 	}
 
 	// Partie BASE DE DONNEE
@@ -78,13 +111,6 @@ public class LoginActivity extends Activity {
 	public SQLiteDatabase getBDD() {
 
 		return bdd;
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		super.onCreateOptionsMenu(menu);
-		getMenuInflater().inflate(R.menu.activity_login, menu);
-		return true;
 	}
 
 	public void PoliceLogin() {
