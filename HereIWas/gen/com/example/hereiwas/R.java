@@ -26,12 +26,17 @@ public final class R {
         public static final int fleuramis=0x7f020006;
         public static final int fleurjsuisici=0x7f020007;
         public static final int fleurmesinfos=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int maintitleimage=0x7f02000a;
+        public static final int gradient_bg=0x7f020009;
+        public static final int gradient_bg_hover=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int image_bg=0x7f02000c;
+        public static final int list_selector=0x7f02000d;
+        public static final int maintitleimage=0x7f02000e;
     }
     public static final class id {
         public static final int ConnectButton=0x7f080004;
         public static final int GridLayout1=0x7f080018;
+        public static final int Img=0x7f080028;
         public static final int InscriptionButton=0x7f080019;
         public static final int ListFriend=0x7f080002;
         public static final int LogOutButton=0x7f080009;
@@ -52,7 +57,7 @@ public final class R {
         public static final int champHintPseudo=0x7f08001c;
         public static final int champLogin=0x7f080012;
         public static final int champPassword=0x7f080014;
-        public static final int flNomPrenom=0x7f080028;
+        public static final int flNomPrenom=0x7f08002a;
         public static final int header=0x7f08000e;
         public static final int imageAvatar=0x7f080021;
         public static final int imageView1=0x7f08000f;
@@ -62,8 +67,9 @@ public final class R {
         public static final int imageViewJsuisIci=0x7f08000d;
         public static final int imageViewMesInfos=0x7f08000b;
         public static final int linearLayout1=0x7f080011;
-        public static final int menu_forgot_password=0x7f08002a;
-        public static final int menu_settings=0x7f080029;
+        public static final int list_image=0x7f080029;
+        public static final int menu_forgot_password=0x7f08002c;
+        public static final int menu_settings=0x7f08002b;
         public static final int scrollView1=0x7f080010;
         public static final int textViewActu=0x7f080001;
         public static final int textViewBirthday=0x7f080026;

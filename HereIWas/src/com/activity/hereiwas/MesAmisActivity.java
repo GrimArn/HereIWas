@@ -14,6 +14,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.ListView;
 
@@ -26,7 +27,7 @@ public class MesAmisActivity extends Activity {
 
 	// Declaration de la listView
 	ListView ListFriend;
-	List<CUser> FriendList = new ArrayList<CUser>();
+	static List<CUser> FriendList = new ArrayList<CUser>();
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,14 +38,19 @@ public class MesAmisActivity extends Activity {
 		  	PoliceAmis();
 		*/
 		
-		// RŽcupŽration du ListView prŽsent dans notre IHM
+		// Recuperation du ListView present dans notre IHM
 		ListFriend = (ListView) findViewById(R.id.ListFriend);
 
 		// Affichage des utilisateurs dans la listViews
 		AddUsr();
 		UserAdapter adapter = new UserAdapter(this, FriendList);
+		int test1 = adapter.getCount();
+		String test2 = String.valueOf(test1);
 		
-		// On passe nos donnŽes au composant ListView
+		
+		Log.v("TEST", test2);
+		
+		// On passe nos donnï¿½es au composant ListView
 		ListFriend.setAdapter(adapter);
 	}
 
@@ -59,21 +65,22 @@ public class MesAmisActivity extends Activity {
 		SimpleDateFormat formater = null;
 		formater = new SimpleDateFormat("dd-MM-yy");
 		formater.format(Now);
-		FriendList.add(new CUser("0616797537", "Nono", "Grima", "Arnaud", Now, "toto@tat.fr", "la path"));
-		FriendList.add(new CUser("0616797537", "Nono", "Vial", "Pauline", Now, "toto@tat.fr", "la path"));
-		FriendList.add(new CUser("0616797537", "Nono", "Bernardi", "Hugo", Now,"toto@tat.fr", "la path"));
-		FriendList.add(new CUser("0616797537", "Nono", "Thoretton", "Matthieu", Now, "toto@tat.fr", "la path"));
+		FriendList.add(new CUser("0616797537", "Nono", "Grima"		, "Arnaud"	, Now, "toto@tat.fr", "la path"));
+		FriendList.add(new CUser("0616797537", "Nono", "Vial"		, "Pauline"	, Now, "toto@tat.fr", "la path"));
+		FriendList.add(new CUser("0616797537", "Nono", "Bernardi"	, "Hugo"	, Now, "toto@tat.fr", "la path"));
+		FriendList.add(new CUser("0616797537", "Nono", "Thoretton"	, "Matthieu", Now, "toto@tat.fr", "la path"));
+
 	}
 
 	// Partie BASE DE DONNEE
 
-	// Ouverture de la base de donnŽe en Žcriture
+	// Ouverture de la base de donnï¿½e en ï¿½criture
 	public void open() {
 
 		bdd = maBaseSQLite.getWritableDatabase();
 	}
 
-	// Fermeture acces de la base de donnŽe
+	// Fermeture acces de la base de donnï¿½e
 	public void close() {
 
 		bdd.close();

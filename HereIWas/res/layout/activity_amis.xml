@@ -8,7 +8,8 @@
     <ListView
         android:id="@+id/ListFriend"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"  >
+        android:layout_height="fill_parent"
+        android:listSelector="@drawable/list_selector"  >
     </ListView>
 
 </LinearLayout>

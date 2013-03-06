@@ -7,15 +7,22 @@ Dans un premier jet (ce qui me vient à l'esprit :) )
     + que tous les champs soit rempli avant le clic, sinon affichage popup		CHECK
     + les champs mdp et confirm mdp soient identiques							CHECK
     + mdp fasse plus de x caractères (à fixer)									CHECK
-    + Avatar, puisse choisir sa photo de profil dans la galerie 
+    + Avatar, puisse choisir sa photo de profil dans la galerie 				CHECK
     ou dans autres choses avec l'affichage d'un petit menu popup.
 
 Amis :
-Si j'ai bien compris, tu t'en occupe, mais je n'ai pas tout compris :(
-Listview plus grande
+Rendre clickable et recuperer donnée du profil
 
 Je suis ici :
      + petit barre en haut avec des icônes pour indiquer position sur maps.
 
 Actu :
      + ....
+
+     
+- Mon compte
+	creer activity_moncompte
+	
+	
+	
+Base de donnée

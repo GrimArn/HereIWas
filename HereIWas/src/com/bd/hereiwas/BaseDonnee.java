@@ -50,7 +50,10 @@ public class BaseDonnee extends SQLiteOpenHelper {
 	public BaseDonnee(Context context) {
 		super(context, NOM_BDD, null, VERSION_BDD);
 	}
-		
+	
+	/**
+	* Création de la base
+	*/
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 	
@@ -60,7 +63,10 @@ public class BaseDonnee extends SQLiteOpenHelper {
 		db.execSQL(CREATE_BDD_JAIME);
 		db.execSQL(CREATE_BDD_COM);
 	}
-		
+	
+	/**
+	* Mise à jour de la base
+	*/
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		

@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -24,45 +25,46 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.QuickContactBadge;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignUpActivity extends Activity {
 
-	// Declaration des variables base de donnee
+  // Declaration des variables base de donnee
 	private SQLiteDatabase bdd;
 	private BaseDonnee maBaseSQLite;
 
-	// Declaration variable pour le dialogAlert
+  // Declaration variable pour le dialogAlert
 	private static final int DIALOG_ALERT = 10;
 
-	// Declaration variable pour l'avatar
-	private static int RESULT_LOAD_IMAGE = 1;
+  // Declaration pour l'avatar
+    private static final int SELECT_PICTURE = 1;
+    private static final int PIC_CROP = 2;
+	private Uri picUri;
 
-	// Declaration patern pour verifier le champ email
-	public final Pattern EMAIL_ADDRESS_PATTERN = Pattern
-			.compile("[a-zA-Z0-9+._%-+]{1,256}" + "@"
+  // Declaration patern pour verifier le champ email
+	public final Pattern EMAIL_ADDRESS_PATTERN = Pattern .compile("[a-zA-Z0-9+._%-+]{1,256}" + "@"
 					+ "[a-zA-Z0-9][a-zA-Z0-9-]{0,64}" + "(" + "."
 					+ "[a-zA-Z0-9][a-zA-Z0-9-]{0,25}" + ")+");
 	
-// Appel des fonctions	
+  // Appel des fonctions	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_signup);
 
-		// Changement de police
+	// Changement de police
 		PoliceSU();
 
-		// Interaction entre les activites grace aux boutons
+	// Interaction entre les activites grace aux boutons
+		
 		// declaration des boutons
-		Button Inscription = (Button) findViewById(R.id.InscriptionButton);
-		QuickContactBadge Avatar = (QuickContactBadge) findViewById(R.id.imageAvatar);
+		Button Inscription = (Button)    findViewById(R.id.InscriptionButton);
+		ImageView BAvatar  = (ImageView) findViewById(R.id.imageAvatar);
 
 		// declaration du click sur le bouton id/InscriptionBouton
 		Inscription.setOnClickListener(new View.OnClickListener() {
-
-			@Override
 			public void onClick(View v) {
 
 				// Verification des donnees du formulaire
@@ -70,30 +72,90 @@ public class SignUpActivity extends Activity {
 			}
 		});
 
-		Avatar.setOnClickListener(new View.OnClickListener() {
+		BAvatar.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				
+				if (v.getId() == R.id.imageAvatar) {     
+		        	try {
+		        		//use standard intent to capture an image
+						Intent intent = new Intent();
+		                intent.setType("image/*");
+		                intent.setAction(Intent.ACTION_GET_CONTENT);
 
-			@Override
-			public void onClick(View arg0) {
-
-				Intent intent = new Intent(
-						Intent.ACTION_PICK,
-						android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-				intent.putExtra("crop", "true");
-				intent.putExtra("outputX", 150);
-				intent.putExtra("outputY", 150);
-				intent.putExtra("aspectX", 1);
-				intent.putExtra("aspectY", 1);
-				intent.putExtra("scale", true);
-				intent.putExtra("return-data", true);
-				startActivityForResult(intent, RESULT_LOAD_IMAGE);
-
+			        	//we will handle the returned data in onActivityResult
+			            startActivityForResult(intent, SELECT_PICTURE);
+		        	}
+		            catch(ActivityNotFoundException anfe){
+		        		//display an error message
+		        		String errorMessage = "Whoops - your device doesn't support capturing images!";
+		        		Toast toast = Toast.makeText(SignUpActivity.this, errorMessage, Toast.LENGTH_SHORT);
+		        		toast.show();
+		        	}
+		        }
 			}
 		});
 	}
 
+  // Pour selectionner une image pour l'avatar
+	
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    	if (resultCode == RESULT_OK) {
+    		//user is returning from capturing an image using the camera
+    		if(requestCode == SELECT_PICTURE){
+    			//get the Uri for the captured image
+    			picUri = data.getData();
+    			//carry out the crop operation
+    			performCrop();
+    		}
+    		//user is returning from cropping the image
+    		else if(requestCode == PIC_CROP){
+    			//get the returned data
+    			Bundle extras = data.getExtras();
+    			//get the cropped bitmap
+    			Bitmap thePic = extras.getParcelable("data");
+    			//retrieve a reference to the ImageView
+    			ImageView picView = (ImageView)findViewById(R.id.imageAvatar);
+    			//display the returned cropped image
+    			picView.setImageBitmap(thePic);
+    		}
+    	}
+    }
+    
+    /**
+     * Helper method to carry out crop operation
+     */
+    private void performCrop(){
+    	//take care of exceptions
+    	try {
+    		//call the standard crop action intent (the user device may not support it)
+	    	Intent cropIntent = new Intent("com.android.camera.action.CROP"); 
+	    	//indicate image type and Uri
+	    	cropIntent.setDataAndType(picUri, "image/*");
+	    	//set crop properties
+	    	cropIntent.putExtra("crop", "true");
+	    	//indicate aspect of desired crop
+	    	cropIntent.putExtra("aspectX", 1);
+	    	cropIntent.putExtra("aspectY", 1);
+	    	//indicate output X and Y
+	    	cropIntent.putExtra("outputX", 256);
+	    	cropIntent.putExtra("outputY", 256);
+	    	//retrieve data on return
+	    	cropIntent.putExtra("return-data", true);
+	    	//start the activity - we handle returning in onActivityResult
+	        startActivityForResult(cropIntent, PIC_CROP);  
+    	}
+    	//respond to users whose devices do not support the crop action
+    	catch(ActivityNotFoundException anfe){
+    		//display an error message
+    		String errorMessage = "Whoops - your device doesn't support the crop action!";
+    		Toast toast = Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT);
+    		toast.show();
+    	}
+    }    
+    
 // Fonction pour l'AlertDialog
+    
 	@SuppressWarnings("deprecation")
-	@Override
 	protected Dialog onCreateDialog(int id) {
 		switch (id) {
 		case DIALOG_ALERT:
@@ -116,52 +178,9 @@ public class SignUpActivity extends Activity {
 			startActivity(t);
 		}
 	}
-
-// Fonction pour le choix de l'image de l'avatar
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-
-		if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK
-				&& null != data) {
-			Uri selectedImage = data.getData();
-			String[] filePathColumn = { MediaStore.Images.Media.DATA };
-
-			Cursor cursor = getContentResolver().query(selectedImage,
-					filePathColumn, null, null, null);
-			cursor.moveToFirst();
-
-			int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-			String picturePath = cursor.getString(columnIndex);
-			cursor.close();
-
-			QuickContactBadge QCBavatar = (QuickContactBadge) findViewById(R.id.imageAvatar);
-			QCBavatar.setImageBitmap(BitmapFactory.decodeFile(picturePath));
-
-		}
-	}
-
-	public Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
-		int width = bm.getWidth();
-		int height = bm.getHeight();
-		float scaleWidth = ((float) newWidth) / width;
-		float scaleHeight = ((float) newHeight) / height;
-
-		// create a matrix for the manipulation
-		Matrix matrix = new Matrix();
-
-		// resize the bit map
-		matrix.postScale(scaleWidth, scaleHeight);
-
-		// recreate the new Bitmap
-		Bitmap resizedBitmap = Bitmap.createBitmap(bm, 0, 0, width, height,
-				matrix, false);
-
-		return resizedBitmap;
-	}
-
+	
 // Fonction pour le sous menu
-	@Override
+
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		getMenuInflater().inflate(R.menu.activity_login, menu);
@@ -169,7 +188,7 @@ public class SignUpActivity extends Activity {
 	}
 
 // Fonction de verification
-	@SuppressWarnings("deprecation")
+
 	protected void VerificationFormulaireInscription() {
 
 		// Declaration des variables pour controle des données
@@ -246,6 +265,7 @@ public class SignUpActivity extends Activity {
 	}
 
 // Changement police
+	
 	public void PoliceSU() {
 
 		// declaration des TextView pour les boutons
