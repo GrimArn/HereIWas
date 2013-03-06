@@ -1,4 +1,6 @@
-package com.example.hereiwas;
+package com.activity.hereiwas;
+
+import com.example.hereiwas.R;
 
 import android.app.Activity;
 import android.content.Intent;

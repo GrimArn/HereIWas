@@ -1,6 +1,9 @@
-package com.example.hereiwas;
+package com.activity.hereiwas;
 
 import java.util.regex.Pattern;
+
+import com.bd.hereiwas.BaseDonnee;
+import com.example.hereiwas.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;

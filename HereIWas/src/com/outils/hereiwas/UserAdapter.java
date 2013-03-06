@@ -1,5 +1,7 @@
-package com.example.hereiwas;
+package com.outils.hereiwas;
 import java.util.List;
+
+import com.example.hereiwas.R;
 
 import android.content.Context;
 import android.view.LayoutInflater;

@@ -1,4 +1,5 @@
-package com.example.hereiwas;
+package com.bd.hereiwas;
+
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

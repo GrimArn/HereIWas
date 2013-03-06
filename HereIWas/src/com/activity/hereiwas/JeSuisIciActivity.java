@@ -1,4 +1,7 @@
-package com.example.hereiwas;
+package com.activity.hereiwas;
+
+import com.bd.hereiwas.BaseDonnee;
+import com.example.hereiwas.R;
 
 import android.app.Activity;
 import android.database.sqlite.SQLiteDatabase;
@@ -7,18 +10,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
 
-public class ActualiteActivity extends Activity {
+public class JeSuisIciActivity extends Activity {
 
 	// Declaration des variables base de donnee
 	private SQLiteDatabase bdd;
 	private BaseDonnee maBaseSQLite;
-		
+	
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actualite);
+        setContentView(R.layout.activity_jesuisici);
 
    /*  // Changement de police 
-        
+        PoliceJSI();
         
      // Interaction entre les activites grace aux boutons
         // declaration de l'image clickable
@@ -37,7 +40,6 @@ public class ActualiteActivity extends Activity {
 	}
 	
 	// Partie BASE DE DONNEE
-	
 	// Ouverture de la base de donnée en écriture
 	public void open() {
 
@@ -62,10 +64,10 @@ public class ActualiteActivity extends Activity {
 		return true;
 	}
 	
-	public void PoliceActu() {
+	public void PoliceJSI() {
 		
 		// declaration des TextView pour les boutons
-        TextView textViewBillabongDeconnexion = (TextView) findViewById(R.id.textViewActu);
+        TextView textViewBillabongDeconnexion = (TextView) findViewById(R.id.textViewJeSuisIci);
      
         // declaration de la police
         Typeface fontBillabong 	= Typeface.createFromAsset(getAssets(), "Billabong.ttf");

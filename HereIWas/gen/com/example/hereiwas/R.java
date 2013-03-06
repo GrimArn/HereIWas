@@ -90,8 +90,6 @@ public final class R {
         public static final int activity_login=0x7f070001;
     }
     public static final class string {
-        public static final int action_sign_in_register=0x7f050022;
-        public static final int action_sign_in_short=0x7f050023;
         public static final int app_name=0x7f050000;
         public static final int autre=0x7f050011;
         public static final int birthday=0x7f050017;
@@ -102,10 +100,6 @@ public final class R {
         public static final int deconnexion=0x7f05000b;
         public static final int email=0x7f050015;
         public static final int emailtexte=0x7f050014;
-        public static final int error_field_required=0x7f050029;
-        public static final int error_incorrect_password=0x7f050028;
-        public static final int error_invalid_email=0x7f050026;
-        public static final int error_invalid_password=0x7f050027;
         public static final int femme=0x7f05000f;
         public static final int filactu=0x7f05001a;
         public static final int here=0x7f050001;
@@ -115,10 +109,8 @@ public final class R {
         public static final int iwas=0x7f050002;
         public static final int jesuisici=0x7f05001c;
         public static final int login=0x7f050008;
-        public static final int login_progress_signing_in=0x7f050025;
         public static final int maintitleimg=0x7f050018;
         public static final int mdpforget=0x7f050019;
-        public static final int menu_forgot_password=0x7f050024;
         public static final int menu_settings=0x7f05000e;
         public static final int mesamis=0x7f05001e;
         public static final int monactu=0x7f05001b;
@@ -127,11 +119,6 @@ public final class R {
         public static final int password=0x7f050009;
         public static final int personnelle=0x7f05000c;
         public static final int prenom=0x7f050012;
-        /**  Strings related to login 
-         */
-        public static final int prompt_email=0x7f050020;
-        public static final int prompt_password=0x7f050021;
-        public static final int title_activity_login=0x7f05001f;
         public static final int validConnexion=0x7f050007;
         public static final int validInscription=0x7f050006;
     }

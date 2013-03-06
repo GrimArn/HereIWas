@@ -15,7 +15,7 @@
         android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
         
         <activity
-            android:name="com.example.hereiwas.HomeActivity"
+            android:name="com.activity.hereiwas.HomeActivity"
             android:screenOrientation="fullSensor"
             android:label="@string/app_name" >
             <intent-filter>
@@ -31,45 +31,45 @@
         </activity> -->
         
         <activity 
-            android:name="com.example.hereiwas.LoginActivity" 
+            android:name="com.activity.hereiwas.LoginActivity" 
             android:screenOrientation="fullSensor"
             android:windowSoftInputMode="stateHidden"
             android:label="@string/app_name" >
         </activity>
     
         <activity 
-            android:name="com.example.hereiwas.SignUpActivity" 
+            android:name="com.activity.hereiwas.SignUpActivity" 
             android:screenOrientation="fullSensor"
            	android:windowSoftInputMode="stateHidden"
             android:label="@string/app_name" >
         </activity>
         
         <activity 
-            android:name="com.example.hereiwas.MenuActivity" 
+            android:name="com.activity.hereiwas.MenuActivity" 
             android:screenOrientation="fullSensor"
             android:label="@string/app_name" >
         </activity>
         
         <activity 
-            android:name="com.example.hereiwas.ActualiteActivity" 
+            android:name="com.activity.hereiwas.ActualiteActivity" 
             android:screenOrientation="fullSensor"
             android:label="@string/app_name" >
         </activity>
         
         <activity 
-            android:name="com.example.hereiwas.MesAmisActivity" 
+            android:name="com.activity.hereiwas.MesAmisActivity" 
             android:screenOrientation="fullSensor"
             android:label="@string/app_name" >
         </activity>
         
         <activity 
-            android:name="com.example.hereiwas.MesInfosActivity" 
+            android:name="com.activity.hereiwas.MesInfosActivity" 
             android:screenOrientation="fullSensor"
             android:label="@string/app_name" >
         </activity>
         
         <activity 
-            android:name="com.example.hereiwas.JeSuisIciActivity" 
+            android:name="com.activity.hereiwas.JeSuisIciActivity" 
             android:screenOrientation="fullSensor"
             android:label="@string/app_name" >
         </activity>
