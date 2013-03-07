@@ -9,13 +9,14 @@ public class BaseDonnee extends SQLiteOpenHelper {
 	
   // Declaration des variables
 	
-	private static final String NOM_BDD = "hereiwas.db";
+	private static final String NOM_BDD = "HereIWas.db";
 	private static final int VERSION_BDD = 1;
 	
   // Declaration de la creation de la base
 	// TABLE USERBDD
 	private static final String CREATE_BDD_USER = "CREATE TABLE " + UserBDD.TABLE_USER + " (" + 
 			UserBDD.COL_NUMUTIL + " TEXT NOT NULL PRIMARY KEY AUTOINCREMENT, " + 
+			UserBDD.COL_PATH 	+ " TEXT NOT NULL, " 	+
 			UserBDD.COL_PSEUDO 	+ " TEXT NOT NULL, " 	+ 
 			UserBDD.COL_NOM 	+ " TEXT NOT NULL, " 	+  
 			UserBDD.COL_PRENOM 	+ " TEXT NOT NULL, " 	+ 

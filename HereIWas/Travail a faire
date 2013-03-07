@@ -10,13 +10,13 @@ Dans un premier jet (ce qui me vient à l'esprit :) )
     + Avatar, puisse choisir sa photo de profil dans la galerie 				CHECK
     ou dans autres choses avec l'affichage d'un petit menu popup.
 
-Amis :
-Rendre clickable et recuperer donnée du profil
+- Amis :
+	Rendre clickable et recuperer donnée du profil								CHECK
 
-Je suis ici :
-     + petit barre en haut avec des icônes pour indiquer position sur maps.
+- Je suis ici :
+     + scrollview pour le commentaire
 
-Actu :
+- Actu :
      + ....
 
      

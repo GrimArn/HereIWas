@@ -10,11 +10,66 @@
         android:id="@+id/textViewJeSuisIci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="93dp"
-        android:layout_marginTop="125dp"
-        android:text="JE SUIS ICI !!!"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/jesuisici"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/coloriwas" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:isScrollContainer="true" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewCommentaire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/champHintDescriptionLieux"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="17dp"
+                android:text="@string/commentaire"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorhere" />
+
+            <EditText
+                android:id="@+id/champHintDescriptionLieux"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textViewCommentaire"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="37dp"
+                android:ems="10"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/captureButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="162dp"
+                android:layout_toRightOf="@+id/textViewCommentaire"
+                android:background="@drawable/custom_button_selector"
+                android:text="@string/capture" />
+
+            <ImageView
+                android:id="@+id/imageLieux"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@+id/captureButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:contentDescription="@string/picture" />
+
+        </RelativeLayout>
+    </ScrollView>
+
 </RelativeLayout>

@@ -25,6 +25,7 @@
     <string name="nom"					>Nom					</string>
     <string name="emailtexte"			>Email					</string>
     <string name="email"				>your@mail.com			</string>
+    <string name="peudo"				>Pseudo					</string>
     <string name="date"					>JJ/MM/AAAA				</string>
     <string name="birthday"				>Anniversaire			</string>
 	<string name="maintitleimg"			>Blablaa				</string>
@@ -32,10 +33,13 @@
 	
 	<string name="filactu"				>Fil\ d\'actualité		</string>
 	<string name="monactu"				>Mon\ Actualité			</string>
-	<string name="jesuisici"			>Je\ suis\ ici			</string>
+	<string name="jesuisici"			>Je\  suis\  ici		</string>
 	<string name="moncompte"			>Mon Compte				</string>
 	<string name="mesamis"				>Mes Amis				</string>
    
+	<string name="capture"				>Prendre une Photo		</string>
+	<string name="picture"				>Photo					</string>
+	<string name="commentaire"			>Commentaire			</string>
 </resources>
 
 

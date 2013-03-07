@@ -29,16 +29,8 @@
         android:layout_toRightOf="@+id/Img"
 		android:textColor="#040404"
         android:typeface="sans"
-        android:textSize="15dip"
+        android:textSize="15sp"
         android:textStyle="bold" 
         android:textAlignment="center"/>
 
 </RelativeLayout>
-
-
-
-   <!--  <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/avatar" />--> 

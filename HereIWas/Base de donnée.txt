@@ -3,6 +3,7 @@ Base de données
 USER :
 
 	NUMID	integer
+	PATH	text
 	PSEUDO	text
 	PRENOM	text
 	NOM		text

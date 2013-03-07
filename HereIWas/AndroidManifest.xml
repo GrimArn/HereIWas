@@ -13,65 +13,67 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
-        
         <activity
             android:name="com.activity.hereiwas.HomeActivity"
-            android:screenOrientation="fullSensor"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <!--  <activityy
+
+        <!--
+        <activityy
             android:name="com.example.hereiwas.LoginActivity"
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="adjustResize|stateVisible" >
-        </activity> -->
-        
-        <activity 
-            android:name="com.activity.hereiwas.LoginActivity" 
-            android:screenOrientation="fullSensor"
-            android:windowSoftInputMode="stateHidden"
-            android:label="@string/app_name" >
         </activity>
-    
-        <activity 
-            android:name="com.activity.hereiwas.SignUpActivity" 
+        -->
+
+        <activity
+            android:name="com.activity.hereiwas.LoginActivity"
+            android:label="@string/app_name"
             android:screenOrientation="fullSensor"
-           	android:windowSoftInputMode="stateHidden"
-            android:label="@string/app_name" >
+            android:windowSoftInputMode="stateHidden" >
         </activity>
-        
-        <activity 
-            android:name="com.activity.hereiwas.MenuActivity" 
+        <activity
+            android:name="com.activity.hereiwas.SignUpActivity"
+            android:label="@string/app_name"
             android:screenOrientation="fullSensor"
-            android:label="@string/app_name" >
+            android:windowSoftInputMode="stateHidden" >
         </activity>
-        
-        <activity 
-            android:name="com.activity.hereiwas.ActualiteActivity" 
-            android:screenOrientation="fullSensor"
-            android:label="@string/app_name" >
+        <activity
+            android:name="com.activity.hereiwas.MenuActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" >
         </activity>
-        
-        <activity 
-            android:name="com.activity.hereiwas.MesAmisActivity" 
-            android:screenOrientation="fullSensor"
-            android:label="@string/app_name" >
+        <activity
+            android:name="com.activity.hereiwas.ActualiteActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" >
         </activity>
-        
-        <activity 
-            android:name="com.activity.hereiwas.MesInfosActivity" 
-            android:screenOrientation="fullSensor"
-            android:label="@string/app_name" >
+        <activity
+            android:name="com.activity.hereiwas.MesAmisActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" >
         </activity>
-        
-        <activity 
-            android:name="com.activity.hereiwas.JeSuisIciActivity" 
+        <activity
+            android:name="com.activity.hereiwas.ProfilAmiActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" >
+        </activity>
+        <activity
+            android:name="com.activity.hereiwas.MesInfosActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor" >
+        </activity>
+        <activity
+            android:name="com.activity.hereiwas.JeSuisIciActivity"
+            android:label="@string/app_name"
             android:screenOrientation="fullSensor"
-            android:label="@string/app_name" >
+            android:windowSoftInputMode="stateHidden" >
         </activity>
     </application>
 

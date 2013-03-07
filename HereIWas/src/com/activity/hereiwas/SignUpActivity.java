@@ -174,7 +174,7 @@ public class SignUpActivity extends Activity {
 			DialogInterface.OnClickListener {
 		public void onClick(DialogInterface dialog, int which) {
 			SignUpActivity.this.finish();
-			Intent t = new Intent(SignUpActivity.this, MenuActivity.class);
+			Intent t = new Intent(SignUpActivity.this, LoginActivity.class);
 			startActivity(t);
 		}
 	}

@@ -12,11 +12,16 @@ import com.outils.hereiwas.UserAdapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.TextView;
 
 @SuppressLint("SimpleDateFormat")
 public class MesAmisActivity extends Activity {
@@ -44,15 +49,27 @@ public class MesAmisActivity extends Activity {
 		// Affichage des utilisateurs dans la listViews
 		AddUsr();
 		UserAdapter adapter = new UserAdapter(this, FriendList);
-		int test1 = adapter.getCount();
-		String test2 = String.valueOf(test1);
-		
-		
-		Log.v("TEST", test2);
 		
 		// On passe nos donn�es au composant ListView
 		ListFriend.setAdapter(adapter);
+		
+		ListFriend.setOnItemClickListener(new OnItemClickListener() {
+	          public void onItemClick(AdapterView<?> parent, View view,
+	              int position, long id) {
+	              TextView Nom = (TextView) view.findViewById(R.id.flNomPrenom);
+	              String Nom2 = Nom.getText().toString();
+	 
+	              // Launching new Activity on selecting single List Item
+	              Intent i = new Intent(getApplicationContext(), ProfilAmiActivity.class);
+	              // sending data to new activity
+	              i.putExtra("Nom", Nom2);
+	              startActivity(i);
+	          }
+	          });
+		
+
 	}
+
 
 	// Partie AJOUT USER
 	private void AddUsr() {
@@ -68,7 +85,7 @@ public class MesAmisActivity extends Activity {
 		FriendList.add(new CUser("0616797537", "Nono", "Grima"		, "Arnaud"	, Now, "toto@tat.fr", "la path"));
 		FriendList.add(new CUser("0616797537", "Nono", "Vial"		, "Pauline"	, Now, "toto@tat.fr", "la path"));
 		FriendList.add(new CUser("0616797537", "Nono", "Bernardi"	, "Hugo"	, Now, "toto@tat.fr", "la path"));
-		FriendList.add(new CUser("0616797537", "Nono", "Thoretton"	, "Matthieu", Now, "toto@tat.fr", "la path"));
+		FriendList.add(new CUser("0616797537", "Nono", "Thoretton"	, "Mathieu", Now, "toto@tat.fr", "la path"));
 
 	}
 
