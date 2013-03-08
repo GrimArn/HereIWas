@@ -50,6 +50,8 @@ import com.example.hereiwas.R;
 
 public class SignUpActivity extends Activity {
 
+/* Declaration des differentes variables */	
+	
 	// Declaration des variables base de donnee
 
 	private SQLiteDatabase bdd;
@@ -76,7 +78,8 @@ public class SignUpActivity extends Activity {
 					+ "[a-zA-Z0-9][a-zA-Z0-9-]{0,64}" + "(" + "."
 					+ "[a-zA-Z0-9][a-zA-Z0-9-]{0,25}" + ")+");
 
-	// Fonction onCreate
+	
+/* Fonction onCreate */
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -235,19 +238,19 @@ public class SignUpActivity extends Activity {
 
 	
 
- // Recuperation des donnŽes en JSON
+ // Recuperation des donnees en JSON
 
 	protected void VerificationEtRecuperationdesDonnees () {
        
-     // Declaration des variables pour recuperation des donnŽes
+     // Declaration des variables pour recuperation des donnees
         
-        EditText C_Pseudo     = (EditText)  findViewById(R.id.champHintPseudo);
-        EditText C_Password   = (EditText)  findViewById(R.id.champHintPassword);
-        EditText C_ConfirmPasswd = (EditText) findViewById(R.id.champHintConfirmPasswd);
-        EditText C_Nom        = (EditText)  findViewById(R.id.champHintNom);
-        EditText C_Prenom     = (EditText)  findViewById(R.id.champHintPrenom);
-        EditText C_Mail       = (EditText)  findViewById(R.id.champHintMail);
-        EditText C_Anniv      = (EditText)  findViewById(R.id.champHintDateAnniv);
+        EditText C_Pseudo     	 = (EditText)  findViewById(R.id.champHintPseudo);
+        EditText C_Password   	 = (EditText)  findViewById(R.id.champHintPassword);
+        EditText C_ConfirmPasswd = (EditText)  findViewById(R.id.champHintConfirmPasswd);
+        EditText C_Nom        	 = (EditText)  findViewById(R.id.champHintNom);
+        EditText C_Prenom     	 = (EditText)  findViewById(R.id.champHintPrenom);
+        EditText C_Mail       	 = (EditText)  findViewById(R.id.champHintMail);
+        EditText C_Anniv      	 = (EditText)  findViewById(R.id.champHintDateAnniv);
 
      // Recuperation du contenu des EditText
         
@@ -261,7 +264,7 @@ public class SignUpActivity extends Activity {
         
         JSONObject jobj;
         
-     // Verification des donnŽes
+     // Verification des donnees
 		        
         // Test si le formulaire n'est pas vide
         
@@ -364,12 +367,13 @@ public class SignUpActivity extends Activity {
 			String ConfirmPasswd, String Nom, String Prenom, String Mail,
 			String Anniv) {
 
-		if (Pseudo.equals("") || Password.equals("")
-				|| ConfirmPasswd.equals("") || Nom.equals("")
+		if (Pseudo.equals("") || Password.equals("") || ConfirmPasswd.equals("") || Nom.equals("")
 				|| Prenom.equals("") || Mail.equals("") || Anniv.equals("")) {
 
 			return false;
-		} else {
+		} 
+		
+		else {
 
 			return true;
 		}
@@ -414,13 +418,13 @@ public class SignUpActivity extends Activity {
 	
 // Partie BASE DE DONNEE
 
-	// Ouverture de la base de donnŽe en Žcriture
+	// Ouverture de la base de donnï¿½e en ï¿½criture
 	public void open() {
 
 		bdd = maBaseSQLite.getWritableDatabase();
 	}
 
-	// Fermeture acces de la base de donnŽe
+	// Fermeture acces de la base de donnï¿½e
 	public void close() {
 
 		bdd.close();
@@ -457,9 +461,9 @@ public class SignUpActivity extends Activity {
 
 		// declaration de la police
 
-		Typeface fontBillabong = Typeface.createFromAsset(getAssets(), "Billabong.ttf");
-		Typeface fontRobotoBlackItalic = Typeface.createFromAsset(getAssets(), "Roboto-BlackItalic.ttf");
-		Typeface fontRobotoLight = Typeface.createFromAsset(getAssets(), "Roboto-Light.ttf");
+		Typeface fontBillabong 		= Typeface.createFromAsset(getAssets(), "Billabong.ttf");
+		Typeface fontRobotoBlackItalic  = Typeface.createFromAsset(getAssets(), "Roboto-BlackItalic.ttf");
+		Typeface fontRobotoLight 	= Typeface.createFromAsset(getAssets(), "Roboto-Light.ttf");
 
 		// initialisation de la police sur les TextView
 
