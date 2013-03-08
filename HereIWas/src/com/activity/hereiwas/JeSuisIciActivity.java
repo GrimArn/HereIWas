@@ -21,28 +21,38 @@ import com.example.hereiwas.R;
 
 public class JeSuisIciActivity extends Activity {
 
+/* Declaration des differentes variables */	
+	
 	// Declaration des variables base de donnee
+	
 	private SQLiteDatabase bdd;
 	private BaseDonnee maBaseSQLite;
 
 	// Declaration des variables pour capturer une photo
+	
 	final int CAMERA_CAPTURE = 1;
 	final int PIC_CROP = 2;
 	// captured picture uri
 	private Uri picUri;
 
+/* Fonction PRINCIPAL */
+	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_jesuisici);
 
-		// Changement de police
+	// Changement de police
 		PoliceJSI();
 
-		// Interaction entre les activites grace aux boutons
-		// declaration de l'image clickable
+	// Interaction entre les activites grace aux boutons
+		
+		// Declaration des interactions
+		
 		Button CapturePicture = (Button) findViewById(R.id.captureButton);
+		Button Publier		  = (Button) findViewById(R.id.PublierButton);
 
-		// declaration du click sur l'image id/captureButton
+		// Declaration de l'evenement prise de photo
+		
 		CapturePicture.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
@@ -64,11 +74,23 @@ public class JeSuisIciActivity extends Activity {
 				}
 			}
 		});
+		
+		// Declaration de l'evenement de publication du lieu
+		
+		Publier.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				
+				// TO DO
+				// alertdialog pour dire que la publication a bien ete publie 
+			}
+		});
 	}
 
-	/**
-	 * Handle user returning from both capturing and cropping the image
-	 */
+ // Fonction pour la capture de photo 	
+	
+	//Handle user returning from both capturing and cropping the image
+	 
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == RESULT_OK) {
 			// user is returning from capturing an image using the camera
@@ -92,9 +114,9 @@ public class JeSuisIciActivity extends Activity {
 		}
 	}
 
-	/**
-	 * Helper method to carry out crop operation
-	 */
+	
+	 // Helper method to carry out crop operation
+	 
 	private void performCrop() {
 		// take care of exceptions
 		try {
@@ -126,14 +148,15 @@ public class JeSuisIciActivity extends Activity {
 		}
 	}
 
-	// Partie BASE DE DONNEE
-	// Ouverture de la base de donnée en écriture
+ // Partie BASE DE DONNEE
+	
+	// Ouverture de la base de donnee en ecriture
 	public void open() {
 
 		bdd = maBaseSQLite.getWritableDatabase();
 	}
 
-	// Fermeture acces de la base de donnée
+	// Fermeture acces de la base de donnee
 	public void close() {
 
 		bdd.close();
@@ -144,26 +167,35 @@ public class JeSuisIciActivity extends Activity {
 		return bdd;
 	}
 
-	@Override
+// Fonction pour le sous menu
+	
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		getMenuInflater().inflate(R.menu.activity_login, menu);
 		return true;
 	}
 
+ // Fonction pour le changement de police
+	
 	public void PoliceJSI() {
 
 		// declaration des TextView pour les boutons
-		TextView textViewBillabongDeconnexion = (TextView) findViewById(R.id.textViewJeSuisIci);
-		TextView textViewRobotoBICom = (TextView) findViewById(R.id.textViewCommentaire);
+		
+		TextView textViewBillabongJesuisici 	= (TextView) findViewById(R.id.textViewJeSuisIci);
+		TextView textViewBillabongPublier		= (TextView) findViewById(R.id.PublierButton);
+		TextView textViewBillabongCapture		= (TextView) findViewById(R.id.captureButton);
+		TextView textViewRobotoBICom 			= (TextView) findViewById(R.id.textViewCommentaire);
 
 		// declaration de la police
-		Typeface fontBillabong = Typeface.createFromAsset(getAssets(),
-				"Billabong.ttf");
-		Typeface fontRobotoBlackItalic = Typeface.createFromAsset(getAssets(),
-				"Roboto-BlackItalic.ttf");
+		
+		Typeface fontBillabong 			= Typeface.createFromAsset(getAssets(), "Billabong.ttf");
+		Typeface fontRobotoBlackItalic 	= Typeface.createFromAsset(getAssets(), "Roboto-BlackItalic.ttf");
+		
 		// initialisation de la police sur les TextView
-		textViewBillabongDeconnexion.setTypeface(fontBillabong);
+		
+		textViewBillabongJesuisici.setTypeface(fontBillabong);
+		textViewBillabongPublier.setTypeface(fontBillabong);
+		textViewBillabongCapture.setTypeface(fontBillabong);
 		textViewRobotoBICom.setTypeface(fontRobotoBlackItalic);
 	}
 
